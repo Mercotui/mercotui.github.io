@@ -66,35 +66,11 @@ html, body {
     justify-content: flex-end;
     padding: 16px;
 }
-/*
-.drawer-header img{
-    -webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    -o-transition: opacity 1s ease-in-out;
-    transition: opacity 1s ease-in-out;
-}
-.drawer-header img.top:hover {
-    opacity:0;
-}*/
 .avatar {
     width: 200x;
     height: 200px;
     border-radius: 90px;
 }
-.avatar-switcher {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    width: 100%;
-}
-
 .navigation {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -134,7 +110,9 @@ html, body {
     margin-bottom: 80px;
     max-width: 1500px;
 }
-
+.mdl-spinner .mdl-spinner--single-color .mdl-js-spinner {
+    align-items: center;
+}
 .cards {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
