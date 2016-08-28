@@ -132,7 +132,7 @@ html, body {
     border-radius: 2px;
     padding: 80px 50px;
     margin-bottom: 80px;
-    max-width: 1080px;
+    max-width: 1500px;
 }
 
 .cards {
@@ -143,6 +143,7 @@ html, body {
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start;
+    max-width: 350px;
 }
 .cards .separator {
     height: 32px;
