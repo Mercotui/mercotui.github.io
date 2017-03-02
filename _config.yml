@@ -1,1 +1,1 @@
-exclude: [.well-known]
+include: [".well-known"]
