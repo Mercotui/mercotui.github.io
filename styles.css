@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+h2 {
+	font-family: monospace;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+h3 {
+	font-family: monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+p {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+blockquote {
+	font-family: monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+.content{
+    margin: auto;
+    background-color: white;
+    display: block;
+    padding: 1em;
+    width: 40%;
+    height: 100%;
+}
