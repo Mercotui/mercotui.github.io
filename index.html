@@ -5,7 +5,7 @@
         <meta name="description" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
         <title>Mercotui</title>
 
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="assets/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
@@ -13,8 +13,16 @@
             <h1>Menno van der Graaf / Mercotui</h1>
             <p>
                 I'm an Embedded Software Engineering student in the Netherlands.<br/>
+
+                <h2>Contact me at:</h2>
+                <div>
+                    <a href="mailto:mennovandergraaf@hotmail.com?SUBJECT=Hi">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        mennovandergraaf@hotmail.com
+                    </a>
+                </div>
                 <div class="contact_column">
-                    <h4>Professional:</h4>
+                    <h3>Professional:</h3>
                     <ul>
                         <li>
                             <a href="https://www.linkedin.com/in/menno-van-der-graaf-13138490">
@@ -37,7 +45,7 @@
                     </ul>
                 </div>
                 <div class="contact_column">
-                    <h4>Personal:</h4>
+                    <h3>Personal:</h3>
                     <ul>
                         <li>
                             <a href="https://twitter.com/Mercotui">
@@ -61,5 +69,9 @@
                 </div>
             </p>
         </div>
+        <script>
+            var image = "assets/background_" + Math.floor(Math.random() * 2) + ".png"
+            document.getElementsByTagName("body")[0].style.backgroundImage = "url('"+ image +"')";
+        </script>
     </body>
 </html>

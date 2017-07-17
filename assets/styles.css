@@ -33,6 +33,19 @@ p {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+ul {
+    list-style-type: none;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkgrey;
+}
+
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
