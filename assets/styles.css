@@ -60,6 +60,6 @@ blockquote {
     background-color: white;
     display: block;
     padding: 1em;
-    width: 40%;
+    max-width: 40em;
     height: 100%;
 }
