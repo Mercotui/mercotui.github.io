@@ -63,3 +63,18 @@ blockquote {
     max-width: 40em;
     height: 100%;
 }
+
+footer{
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer .foot_links{
+    text-align: center;
+}
+footer .foot_text{
+    color: grey;
+}
+footer .foot_text:hover{
+    background-color: white;
+}
