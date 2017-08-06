@@ -2,10 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
+        <meta name="description" content="Mercotui's troy ounce converter'">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Mercotui/Troy</title>
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="144x144" href="assets/favicon.png">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Troy ounce converter">
+        <link rel="apple-touch-icon-precomposed" href="assets/favicon.png">
+         <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="assets/favicon.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="assets/favicon.png">
 
         <link rel="stylesheet" href="assets/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,18 +30,18 @@
             <p>
                 Ounce :<br/>
                 <input type="number" id="field_ounce" oninput="ounce_changed()"><br/>
-                Gram :<br/>
-                <input type="number" id="field_gram" oninput="gram_changed()"><br/>
                 Troy ounce :<br/>
                 <input type="number" id="field_troy" oninput="troy_changed()"><br/>
+                Gram :<br/>
+                <input type="number" id="field_gram" oninput="gram_changed()"><br/>
             </p>
         </div>
         <script>
             var image = "assets/background_" + Math.floor(Math.random() * 3) + ".png"
             document.getElementsByTagName("body")[0].style.backgroundImage = "url('"+ image +"')";
 
-            var factor_ounce_to_gram = 28.3495231;
-            var factor_troy_to_gram = 31.1034768;
+            var factor_ounce_to_gram  = 28.3495231;
+            var factor_troy_to_gram   = 31.1034768;
 
             function ounce_changed() {
                 var field_ounce = document.getElementById("field_ounce");
