@@ -52,8 +52,8 @@
                 var gram = ounce * factor_ounce_to_gram;
                 var troy = gram / factor_troy_to_gram;
 
-                field_gram.value = gram;
-                field_troy.value = troy;
+                field_gram.value = round_to_three(gram);
+                field_troy.value = round_to_three(troy);
             }
 
             function gram_changed() {
@@ -65,8 +65,8 @@
                 var ounce = gram / factor_ounce_to_gram;
                 var troy = gram / factor_troy_to_gram;
 
-                field_ounce.value = ounce;
-                field_troy.value = troy;
+                field_ounce.value = round_to_three(ounce);
+                field_troy.value = round_to_three(troy);
             }
 
             function troy_changed() {
@@ -78,8 +78,12 @@
                 var gram = troy * factor_troy_to_gram;
                 var ounce = gram / factor_ounce_to_gram;
 
-                field_gram.value = gram;
-                field_ounce.value = ounce;
+                field_gram.value = round_to_three(gram);
+                field_ounce.value = round_to_three(ounce);
+            }
+
+            function round_to_three(num) {
+                return +(Math.round(num + "e+3")  + "e-3");
             }
 
             field_ounce.value = 1;
