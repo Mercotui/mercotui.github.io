@@ -38,12 +38,12 @@ ul {
 }
 
 a {
-  color: grey;
+  color: dimgrey;
   text-decoration: none;
 }
 
 a:hover {
-  color: darkgrey;
+  color: grey;
 }
 
 blockquote {
@@ -55,11 +55,33 @@ blockquote {
 	line-height: 23px;
 }
 
+.titlebar{
+    text-align:center;
+    margin: auto;
+    margin-top: 1em;
+    background-color: lightgray;
+    display: block;
+    padding: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 50em;
+}
+
+.navbar{
+    text-align:center;
+    margin: auto;
+    margin-bottom: 1em;
+    background-color: lightgray;
+    display: block;
+    max-width: 50em;
+}
+
 .content{
     margin: auto;
-    background-color: white;
+    background-color: lightgray;
     display: block;
-    padding: 1em;
-    max-width: 40em;
-    height: 100%;
+    padding: 10em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    max-width: 50em;
 }
