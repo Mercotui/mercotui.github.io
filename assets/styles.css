@@ -4,11 +4,11 @@ body {
 
 h1 {
 	font-family: monospace;
-	font-size: 24px;
+	font-size: 40px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 26.4px;
+	line-height: 45px;
 }
 
 h2 {
@@ -17,7 +17,7 @@ h2 {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 23px;
+	line-height: 26px;
 }
 
 h3 {
@@ -38,6 +38,7 @@ ul {
 }
 
 a {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
     word-wrap: break-word;
     text-decoration: none;
     color: dimgrey;
