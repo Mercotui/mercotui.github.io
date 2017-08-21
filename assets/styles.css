@@ -1,5 +1,7 @@
 body {
     background-color: black;
+    width: 100%;
+    margin: 0;
 }
 
 h1 {
@@ -17,7 +19,7 @@ h2 {
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
-	line-height: 26px;
+	line-height: 23px;
 }
 
 h3 {
@@ -29,12 +31,47 @@ h3 {
 	line-height: 23px;
 }
 
+h4 {
+	font-family: monospace;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+summary {
+	font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+summary > h3 {
+    display: inline;
+}
+
+summary:hover{
+    color: dimgrey;
+}
+
+details > .projectinfo {
+    padding: 0 2em;
+}
+
+
+/* Edit this to add style to opened details
+details[open] > summary {
+    font-family: monospace;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 23px;
+}
+*/
+
 p {
     font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
 ul {
     list-style-type: none;
+    padding-left: 0;
 }
 
 a {
@@ -48,6 +85,10 @@ a:hover {
     color: grey;
 }
 
+.projectlink {
+    font-size: 17px;
+}
+
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
@@ -59,22 +100,27 @@ blockquote {
 
 .titlebar{
     text-align:center;
-    margin: auto;
-    margin-top: 1em;
+    margin: 1em auto;
     background-color: lightgray;
     display: block;
     padding: 2em 10%;
     max-width: 50em;
 }
 
-.navbar{
-    text-align:center;
+ul.navbar {
+    font-family: monospace;
+    font-size: 23px;
+    width: 100%;
+}
+
+li.nav{
+    display: inline;
     margin: auto;
-    margin-bottom: 1em;
-    background-color: lightgray;
-    display: block;
-    /*padding: 2em 10%;*/
-    max-width: 50em;
+    width: 50%;
+}
+
+li.nav > a {
+    font: inherit;
 }
 
 .content{
