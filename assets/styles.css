@@ -125,6 +125,7 @@ li.nav > a {
 
 .content{
     margin: auto;
+    margin-bottom: 1em;
     background-color: lightgray;
     display: block;
     padding: 2em 10%;
