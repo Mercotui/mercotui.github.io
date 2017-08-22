@@ -106,7 +106,7 @@ blockquote {
 .titlebar{
     text-align:center;
     margin: 1em auto;
-    background-color: lightgray;
+    background-color: gainsboro;
     display: block;
     padding: 2em 10%;
     max-width: 50em;
