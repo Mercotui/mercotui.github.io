@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>Blog Posts</h1>
+<p>Here are some of the things that I spend time on:</p>
+{% for post in site.posts %}
+<article>
+    <a href="{{ post.url }}">
+        <div>
+        <h2> {{ post.title }}</h2>
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+        <p class="post_catagories"> {{ post.categories }} </p>
+        </div>
+    </a>
+</article>
+{% endfor %}
