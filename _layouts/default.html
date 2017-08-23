@@ -28,11 +28,23 @@
         <div class="titlebar">
             <h1>Menno van der Graaf / Mercotui</h1>
             <ul class="navbar">
-              <li class="nav"><a href="{{ site.github.url }}/index.html">Home</a></li>
-              /
-              <li class="nav"><a href="{{ site.github.url }}/projects.html">Projects</a></li>
-              /
-              <li class="nav"><a href="{{ site.github.url }}/blog.html">Blog</a></li>
+                {% if page.navname == "home" %}
+                <li class="nav"><u>Home</u></li>
+                {% else %}
+                <li class="nav"><a href="{{ site.github.url }}/index.html">Home</a></li>
+                {% endif %}
+                /
+                {% if page.navname == "projects" %}
+                <li class="nav"><u>Projects</u></li>
+                {% else %}
+                <li class="nav"><a href="{{ site.github.url }}/projects.html">Projects</a></li>
+                {% endif %}
+                /
+                {% if page.navname == "blog" %}
+                <li class="nav"><u>Blog</u></li>
+                {% else %}
+                <li class="nav"><a href="{{ site.github.url }}/blog.html">Blog</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="content">
