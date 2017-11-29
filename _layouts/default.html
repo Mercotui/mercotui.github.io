@@ -9,19 +9,19 @@
 
         <!-- Add to homescreen for Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
-        <link rel="icon" sizes="144x144" href="{{ site.github.url }}/assets/favicon.png">
+        <link rel="icon" sizes="144x144" href="{{ site.url }}/assets/favicon.png">
         <!-- Add to homescreen for Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
-        <link rel="apple-touch-icon-precomposed" href="{{ site.github.url }}/assets/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/favicon.png">
          <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="{{ site.github.url }}/assets/favicon.png">
+        <meta name="msapplication-TileImage" content="{{ site.url }}/assets/favicon.png">
         <meta name="msapplication-TileColor" content="#3372DF">
         <!-- Favicon -->
-        <link rel="shortcut icon" href="{{ site.github.url }}/assets/favicon.png">
+        <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.png">
 
-        <link rel="stylesheet" href="{{ site.github.url }}/assets/styles.css">
+        <link rel="stylesheet" href="{{ site.url }}/assets/styles.css">
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
     </head>
     <body>
@@ -31,19 +31,19 @@
                 {% if page.navname == "home" %}
                 <li class="nav"><u>Home</u></li>
                 {% else %}
-                <li class="nav"><a href="{{ site.github.url }}">Home</a></li>
+                <li class="nav"><a href="{{ site.url }}">Home</a></li>
                 {% endif %}
                 /
                 {% if page.navname == "projects" %}
                 <li class="nav"><u>Projects</u></li>
                 {% else %}
-                <li class="nav"><a href="{{ site.github.url }}/projects">Projects</a></li>
+                <li class="nav"><a href="{{ site.url }}/projects">Projects</a></li>
                 {% endif %}
                 /
                 {% if page.navname == "blog" %}
                 <li class="nav"><u>Blog</u></li>
                 {% else %}
-                <li class="nav"><a href="{{ site.github.url }}/blog">Blog</a></li>
+                <li class="nav"><a href="{{ site.url }}/blog">Blog</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -51,7 +51,7 @@
             {{ content }}
         </div>
       <script>
-          var image = "{{ site.github.url }}/assets/background_" + Math.floor(Math.random() * 3) + ".png"
+          var image = "{{ site.url }}/assets/background_" + Math.floor(Math.random() * 3) + ".png"
           document.getElementsByTagName("body")[0].style.backgroundImage = "url('"+ image +"')";
       </script>
   </body>
