@@ -124,6 +124,12 @@ li.nav{
     width: 50%;
 }
 
+li.nav_divider{
+    display: inline;
+    margin: auto;
+    width: 50%;
+}
+
 li.nav > a {
     font: inherit;
 }
