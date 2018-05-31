@@ -1,0 +1,3 @@
+[submodule "condor_signage"]
+	path = condor_signage
+	url = https://github.com/Mercotui/condor_signage.git
