@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+	font-family: monospace;
+	font-size: 40px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 45px;
+}
+
+h2 {
+	font-family: monospace;
+	font-size: 23px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+h3 {
+	font-family: monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+h4 {
+	font-family: monospace;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+summary {
+	font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+summary > h3 {
+    display: inline;
+}
+
+summary:hover{
+    color: dimgrey;
+}
+
+details > .projectinfo {
+    padding: 0 2em;
+}
+
+
+/* Edit this to add style to opened details
+details[open] > summary {
+    font-family: monospace;
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 23px;
+}
+*/
+
+p {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    word-wrap: break-word;
+    text-decoration: none;
+    color: dimgrey;
+}
+
+a:hover {
+    color: grey;
+}
+
+.projectlink {
+    font-size: 17px;
+}
+
+.post_catagories {
+    display: inline;
+    /*float: left;*/
+}
+
+blockquote {
+	font-family: monospace;
+	font-size: 17px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 23px;
+}
+
+.titlebar{
+    text-align:center;
+    margin: 1em auto;
+    background-color: gainsboro;
+    display: block;
+    padding: 2em 10%;
+    max-width: 50em;
+}
+
+ul.navbar {
+    font-family: monospace;
+    font-size: 23px;
+    width: 100%;
+}
+
+li.nav{
+    display: inline;
+    margin: auto;
+    width: 50%;
+}
+
+li.nav_divider{
+    display: inline;
+    margin: auto;
+    width: 50%;
+}
+
+li.nav > a {
+    font: inherit;
+}
+
+.content{
+    margin: auto;
+    margin-bottom: 1em;
+    background-color: gainsboro;
+    display: block;
+    padding: 2em 10%;
+    max-width: 50em;
+}

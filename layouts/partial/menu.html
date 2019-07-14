@@ -1,0 +1,19 @@
+<ul class="navbar">
+    {% if page.navname == "home" %}
+    <li class="nav"><u>Home</u></li>
+    {% else %}
+    <li class="nav"><a href="{{ .Site.BaseURL }}">Home</a></li>
+    {% endif %}
+    <li class="nav_divider"> / </li>
+    {% if page.navname == "projects" %}
+    <li class="nav"><u>Projects</u></li>
+    {% else %}
+    <li class="nav"><a href="{{ .Site.BaseURL }}/projects">Projects</a></li>
+    {% endif %}
+    <li class="nav_divider"> / </li>
+    {% if page.navname == "blog" %}
+    <li class="nav"><u>Blog</u></li>
+    {% else %}
+    <li class="nav"><a href="{{ .Site.BaseURL }}/blog">Blog</a></li>
+    {% endif %}
+</ul>

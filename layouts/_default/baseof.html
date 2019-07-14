@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Mercotui</title>
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="144x144" href="{{ .Site.BaseURL }}/assets/favicon.png">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
+        <link rel="apple-touch-icon-precomposed" href="{{ .Site.BaseURL }}/assets/favicon.png">
+         <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}/assets/favicon.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ .Site.BaseURL }}/assets/favicon.png">
+
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/main.css">
+        <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/font-awesome/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="titlebar">
+            <h1>Menno van der Graaf / Mercotui</h1>
+        </div>
+        <div class="content">
+            {{ block "main" . }}{{ end }}
+        </div>
+      <script>
+          var image = "{{ .Site.BaseURL }}/images/background_" + Math.floor(Math.random() * 3) + ".png"
+          document.getElementsByTagName("body")[0].style.backgroundImage = "url('"+ image +"')";
+      </script>
+  </body>
+</html>
