@@ -1,6 +1,6 @@
 [submodule "apps/condor_signage"]
 	path = apps/condor_signage
-	url = git@github.com:Mercotui/condor_signage.git
+	url = https://github.com:Mercotui/condor_signage.git
 [submodule "apps/healthcare_prototype"]
 	path = apps/healthcare_prototype
-	url = git@github.com:Mercotui/healthcare_prototype.git
+	url = https://github.com:Mercotui/healthcare_prototype.git
