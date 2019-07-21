@@ -41,16 +41,16 @@
   </url>
   
   <url>
-    <loc>https://mercotui.com/projects/</loc>
-  </url>
-  
-  <url>
     <loc>https://mercotui.com/troy/</loc>
   </url>
   
   <url>
     <loc>https://mercotui.com/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mercotui.com/projects/</loc>
   </url>
   
 </urlset>

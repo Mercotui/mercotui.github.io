@@ -94,6 +94,13 @@ a:hover {
     /*float: left;*/
 }
 
+.email-adress{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  white-space: nowrap;
+}
+
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
@@ -168,7 +175,7 @@ blockquote {
    display: block;
    text-align: left;
  }
-} 
+}
 
 ul.navbar {
     font-family: monospace;
