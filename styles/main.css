@@ -101,6 +101,14 @@ a:hover {
   white-space: nowrap;
 }
 
+.potd{
+  max-width: 100%;
+  max-height: 30em;
+  image-orientation: from-image;
+  margin: auto;
+  display: block;
+}
+
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
