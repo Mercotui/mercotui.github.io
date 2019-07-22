@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AR Qt5 OpenGL-ES C&#43;&#43; on Mercotui</title>
-    <link>https://mercotui.com/categories/ar-qt5-opengl-es-c&#43;&#43;/</link>
-    <description>Recent content in AR Qt5 OpenGL-ES C&#43;&#43; on Mercotui</description>
+    <title>Blogs on Mercotui</title>
+    <link>https://mercotui.com/blog/</link>
+    <description>Recent content in Blogs on Mercotui</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 23 Aug 2017 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://mercotui.com/categories/ar-qt5-opengl-es-c++/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mercotui.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,6 +19,26 @@
       <guid>https://mercotui.com/blog/qopenglwidget_for_augmented_reality/</guid>
       <description>During development of ARticated I took responsibility for converting the acquired 3D information and input image into an augmented image.
 I should mention that the specifics of Vission Processing are left out of this post, you could use OpenCV like we did with the first itteration of ARticated, or like the second iteration, write some processing operators from scratch, or like the planned third iteration, use GPU acceleration to speed up the processing.</description>
+    </item>
+    
+    <item>
+      <title>Hello World!</title>
+      <link>https://mercotui.com/blog/2017-08-22-hello-world/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0200</pubDate>
+      
+      <guid>https://mercotui.com/blog/2017-08-22-hello-world/</guid>
+      <description>Hello, this is the blog. We&amp;rsquo;ll see if this ever gets used
+Testing 1 2 3 Ok, bye -Menno van der Graaf</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://mercotui.com/blog/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mercotui.com/blog/blog/</guid>
+      <description>Blog Posts Here are some of the things that I spend time on:
+{% for post in site.posts %}    {{ post.title }} {{ post.date | date_to_long_string }} {{ post.categories }}    {% endfor %} </description>
     </item>
     
   </channel>

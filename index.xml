@@ -13,50 +13,50 @@
     
     <item>
       <title>QOpenGLWidget for augmented reality</title>
-      <link>https://mercotui.com/qopenglwidget_for_augmented_reality/</link>
+      <link>https://mercotui.com/blog/qopenglwidget_for_augmented_reality/</link>
       <pubDate>Wed, 23 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://mercotui.com/qopenglwidget_for_augmented_reality/</guid>
-      <description>QOpenGLWidget for augmented reality During development of ARticated I took responsibility for converting the acquired 3D information and input image into an augmented image.
+      <guid>https://mercotui.com/blog/qopenglwidget_for_augmented_reality/</guid>
+      <description>During development of ARticated I took responsibility for converting the acquired 3D information and input image into an augmented image.
 I should mention that the specifics of Vission Processing are left out of this post, you could use OpenCV like we did with the first itteration of ARticated, or like the second iteration, write some processing operators from scratch, or like the planned third iteration, use GPU acceleration to speed up the processing.</description>
     </item>
     
     <item>
       <title>Hello World!</title>
-      <link>https://mercotui.com/2017-08-22-hello-world/</link>
-      <pubDate>Tue, 22 Aug 2017 00:00:00 +0000</pubDate>
+      <link>https://mercotui.com/blog/2017-08-22-hello-world/</link>
+      <pubDate>Tue, 22 Aug 2017 00:00:00 +0200</pubDate>
       
-      <guid>https://mercotui.com/2017-08-22-hello-world/</guid>
-      <description>Hello World! Hello, this is the blog. We&amp;rsquo;ll see if this ever gets used
+      <guid>https://mercotui.com/blog/2017-08-22-hello-world/</guid>
+      <description>Hello, this is the blog. We&amp;rsquo;ll see if this ever gets used
 Testing 1 2 3 Ok, bye -Menno van der Graaf</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://mercotui.com/blog/</link>
+      <link>https://mercotui.com/blog/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://mercotui.com/blog/</guid>
+      <guid>https://mercotui.com/blog/blog/</guid>
       <description>Blog Posts Here are some of the things that I spend time on:
 {% for post in site.posts %}    {{ post.title }} {{ post.date | date_to_long_string }} {{ post.categories }}    {% endfor %} </description>
     </item>
     
     <item>
-      <title></title>
-      <link>https://mercotui.com/troy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://mercotui.com/troy/</guid>
-      <description>Troy ounce converter  Ounce :  Troy ounce :  Gram :   var image = &#34;assets/background_&#34; + Math.floor(Math.random() * 3) + &#34;.png&#34; document.getElementsByTagName(&#34;body&#34;)[0].style.backgroundImage = &#34;url(&#39;&#34;+ image +&#34;&#39;)&#34;; var factor_ounce_to_gram = 28.3495231; var factor_troy_to_gram = 31.1034768; function ounce_changed() { var field_ounce = document.getElementById(&#34;field_ounce&#34;); var field_gram = document.getElementById(&#34;field_gram&#34;); var field_troy = document.getElementById(&#34;field_troy&#34;); var ounce = field_ounce.value; var gram = ounce * factor_ounce_to_gram; var troy = gram / factor_troy_to_gram; field_gram.value = round_to_three(gram); field_troy.</description>
-    </item>
-    
-    <item>
-      <title>This is a content file in HTML</title>
+      <title>Project Showcase</title>
       <link>https://mercotui.com/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mercotui.com/projects/</guid>
-      <description>Project Showcase  A selection of projects I am proud to show. I&#39;ll update this list soon!   ARticated learning augmented reality &amp;amp; OpenGL-ES 3.0   ARticated is an augmented reality app, that runs on Linux and Android. [insert image here]  derpicated/articated at GitHub   ARticated was created by me and Ingmar Delsink as part of our minor in Embedded Vision Design. Technical Overview [fill in please]     bin_to_png learning ruby &amp;amp; creating art   Bin_to_png can take binaries and/or source code and convert them into art.</description>
+      <description>A selection of projects I am proud to show. I&#39;ll update this list soon!   ARticated learning augmented reality &amp;amp; OpenGL-ES 3.0   ARticated is an augmented reality app, that runs on Linux and Android. [insert image here]  derpicated/articated at GitHub   ARticated was created by me and Ingmar Delsink as part of our minor in Embedded Vision Design. Technical Overview [fill in please]     bin_to_png learning ruby &amp;amp; creating art   Bin_to_png can take binaries and/or source code and convert them into art.</description>
+    </item>
+    
+    <item>
+      <title>Troy ounce converter</title>
+      <link>https://mercotui.com/apps/troy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mercotui.com/apps/troy/</guid>
+      <description>Ounce :  Troy ounce :  Gram :   var image = &#34;assets/background_&#34; + Math.floor(Math.random() * 3) + &#34;.png&#34; document.getElementsByTagName(&#34;body&#34;)[0].style.backgroundImage = &#34;url(&#39;&#34;+ image +&#34;&#39;)&#34;; var factor_ounce_to_gram = 28.3495231; var factor_troy_to_gram = 31.1034768; function ounce_changed() { var field_ounce = document.getElementById(&#34;field_ounce&#34;); var field_gram = document.getElementById(&#34;field_gram&#34;); var field_troy = document.getElementById(&#34;field_troy&#34;); var ounce = field_ounce.value; var gram = ounce * factor_ounce_to_gram; var troy = gram / factor_troy_to_gram; field_gram.value = round_to_three(gram); field_troy.value = round_to_three(troy); } function gram_changed() { var field_ounce = document.</description>
     </item>
     
   </channel>

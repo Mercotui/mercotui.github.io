@@ -33,15 +33,23 @@
 
         <main class="content" role="main">
           
-<h1>Error 404</h1>
-<p>
-    The page was not found, whoops... <br></br>
-    if you think this is a bug, help me out by <a href="https://github.com/Mercotui/personal-website/issues">reporting it on github</a>.<br></br>
-    <a href="https://mercotui.com">
-        <i class="fa fa-home" aria-hidden="true"></i>
-        TAKE ME HOME!
+
+<h2></h2>
+<h1>Blog Posts</h1>
+<p>Here are some of the things that I spend time on:</p>
+{% for post in site.posts %}
+<article>
+    <a href="{{ post.url }}">
+        <div>
+        <h2> {{ post.title }}</h2>
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+        <p class="post_catagories"> {{ post.categories }} </p>
+        </div>
     </a>
-</p>
+</article>
+{% endfor %}
+
+
 
         </main>
       <script>

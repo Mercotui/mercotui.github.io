@@ -3,7 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mercotui.com/apps/</loc>
+    <lastmod>2019-07-22T02:34:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mercotui.com/potd/</loc>
+    <lastmod>2019-07-22T02:34:17+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mercotui.com/categories/ar-qt5-opengl-es-c&#43;&#43;/</loc>
+    <lastmod>2017-08-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mercotui.com/blog/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -21,27 +37,21 @@
   </url>
   
   <url>
-    <loc>https://mercotui.com/qopenglwidget_for_augmented_reality/</loc>
+    <loc>https://mercotui.com/blog/qopenglwidget_for_augmented_reality/</loc>
     <lastmod>2017-08-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mercotui.com/2017-08-22-hello-world/</loc>
-    <lastmod>2017-08-22T00:00:00+00:00</lastmod>
+    <loc>https://mercotui.com/blog/2017-08-22-hello-world/</loc>
+    <lastmod>2017-08-22T00:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mercotui.com/categories/test-update/</loc>
-    <lastmod>2017-08-22T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://mercotui.com/blog/blog/</loc>
   </url>
   
   <url>
-    <loc>https://mercotui.com/blog/</loc>
-  </url>
-  
-  <url>
-    <loc>https://mercotui.com/troy/</loc>
+    <loc>https://mercotui.com/projects/</loc>
   </url>
   
   <url>
@@ -50,7 +60,7 @@
   </url>
   
   <url>
-    <loc>https://mercotui.com/projects/</loc>
+    <loc>https://mercotui.com/apps/troy/</loc>
   </url>
   
 </urlset>
