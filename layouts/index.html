@@ -1,8 +1,12 @@
 {{ define "main" }}
   <h2>Picture of the day</h2>
-  <img class="potd" src="{{ .Site.BaseURL }}/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station">
-  <!-- title="Click for more information" -->
-  
+  <p>
+    By me, Menno van der Graaf
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+    Randomly selected daily, click here for more.
+  </p>
+  <img class="potd" id="potd" src="{{ .Site.BaseURL }}/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
+
   <h2>About</h2>
   <p>
       I'm an Embedded Software Engineer from the Netherlands,

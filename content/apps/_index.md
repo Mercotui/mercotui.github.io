@@ -1,7 +1,6 @@
 +++
-title = "Picture Of The Day"
+title = "Apps"
 date = 2019-07-22T02:34:17+02:00
-layout = "list"
 +++
 
 This website hosts a couple of WebApps that I developed.
