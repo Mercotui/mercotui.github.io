@@ -104,9 +104,16 @@ a:hover {
 .potd{
   max-width: 100%;
   max-height: 30em;
-  image-orientation: from-image;
   margin: auto;
   display: block;
+}
+
+.modal-image {
+  max-height: 90vh;
+  max-width: 100%;
+  /* text-align: center; */
+  /* margin: auto; */
+  /* object-fit: scale-down; */
 }
 
 blockquote {
