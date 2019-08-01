@@ -11,6 +11,8 @@
 
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/main.css">
         <link rel="stylesheet" href="{{ .Site.BaseURL }}/styles/font-awesome/css/font-awesome.min.css">
+
+        {{ block "extra_header" . }}{{ end }}
     </head>
     <body>
         <div class="titlebar">
