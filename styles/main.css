@@ -108,14 +108,6 @@ a:hover {
   display: block;
 }
 
-.modal-image {
-  max-height: 90vh;
-  max-width: 100%;
-  /* text-align: center; */
-  /* margin: auto; */
-  /* object-fit: scale-down; */
-}
-
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
