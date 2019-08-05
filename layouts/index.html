@@ -1,3 +1,10 @@
+{{ define "extra_header"}}
+  <script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
+  <script src="/scripts/potd.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="/styles/baguetteBox.min.css">
+{{ end }}
+
 {{ define "main" }}
   <h2>Picture of the day</h2>
   <p>
@@ -6,9 +13,14 @@
     Randomly selected daily, click <a href="potd">here</a> for more.
   </p>
 
+  <div class="gallery">
+    <a id="potd-random-container">
+      <img class="potd-placeholder" id="potd-random"></img>
+    </a>
+  </div>
   <noscript>
     <p>My random selector script can't be run, have this cat instead:</p>
-    <img class="potd" id="potd" src="{{ .Site.BaseURL }}/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
+    <img class="potd" src="{{ .Site.BaseURL }}/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
   </noscript>
 
   <h2>About</h2>

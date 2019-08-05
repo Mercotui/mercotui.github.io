@@ -108,6 +108,12 @@ a:hover {
   display: block;
 }
 
+.potd-placeholder{
+  height: 30em;
+  margin: auto;
+  display: block;
+}
+
 blockquote {
 	font-family: monospace;
 	font-size: 17px;
