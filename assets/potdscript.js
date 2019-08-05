@@ -1,14 +1,9 @@
-window.onload = init;
+window.onload = function () {
+  select_random_potd();
 
-function init() {
-  let images = document.getElementsByClassName('potd');
-
-  for (let i = 0; i < images.length; i++) {
-    images[i].addEventListener("click", onImageClick);
-  }
+  baguetteBox.run('.gallery', {noScrollbars: true});
 }
 
-function onImageClick(event) {
-  let element = event.target;
-  uglipop({class:'modal-image', source:'html', content:'<img src="'+element.src+'"></img>'});
+function select_random_potd () {
+  console.log("test!");
 }

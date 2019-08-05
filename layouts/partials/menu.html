@@ -1,7 +1,9 @@
 <ul class="navbar">
-    <li class="nav"><a href="{{ .Site.BaseURL }}">Home</a></li>
-    <li class="nav_divider"> / </li>
-    <li class="nav"><a href="{{ .Site.BaseURL }}/projects">Projects</a></li>
-    <li class="nav_divider"> / </li>
-    <li class="nav"><a href="{{ .Site.BaseURL }}/blog">Blog</a></li>
+    <li class="nav {{ if eq (.Param "nav_name") "home"}}nav-active{{ end }}"><a href="{{ .Site.BaseURL }}">Home</a></li>
+    <li class="nav-divider">/</li>
+    <li class="nav {{ if eq (.Param "nav_name") "potd"}}nav-active{{ end }}"><a href="{{ .Site.BaseURL }}/potd">Potd</a></li>
+
+    <!-- <li class="nav"><a href="{{ .Site.BaseURL }}/projects">Projects</a></li>
+    <li class="nav-divider"> / </li>
+    <li class="nav"><a href="{{ .Site.BaseURL }}/blog">Blog</a></li> -->
 </ul>
