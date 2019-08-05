@@ -6,9 +6,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Mercotui</title>
-        <meta name="description" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
 
         
+
+<meta name="description" content="Home of Menno &quot;Mercotui&quot; van der Graaf">
+
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="icon" sizes="144x144" href="https://mercotui.com/images/favicon.png">
 
@@ -27,11 +29,23 @@
         <link rel="stylesheet" href="https://mercotui.com/styles/font-awesome/css/font-awesome.min.css">
 
         
+  <script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
+  <script src="/scripts/potd.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="/styles/baguetteBox.min.css">
+
     </head>
     <body>
         <div class="titlebar">
             <h1>Menno van der Graaf / Mercotui</h1>
-            
+            <ul class="navbar">
+    <li class="nav nav-active"><a href="https://mercotui.com">Home</a></li>
+    <li class="nav-divider">/</li>
+    <li class="nav "><a href="https://mercotui.com/potd">Potd</a></li>
+
+    
+</ul>
+
         </div>
 
         <main class="content" role="main">
@@ -42,7 +56,13 @@
     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
     Randomly selected daily, click <a href="potd">here</a> for more.
   </p>
-  <img class="potd" id="potd" src="https://mercotui.com/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
+
+  <div class="gallery" id="potd-random">
+  </div>
+  <noscript>
+    <p>My random selector script can't be run, have this cat instead:</p>
+    <img class="potd" src="https://mercotui.com/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
+  </noscript>
 
   <h2>About</h2>
   <p>

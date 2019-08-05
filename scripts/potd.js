@@ -26,16 +26,12 @@ const imagelist = [
     }
 ]
 window.onload = function () {
-  baguetteBox.run('.gallery');
-//   let images = document.getElementsByClassName('potd');
-//
-//   for (let i = 0; i < images.length; i++) {
-//     images[i].addEventListener("click", onImageClick);
-//   }
-// }
-//
-// function onImageClick(event) {
-//   let element = event.target;
-//
+  select_random_potd();
 
+  baguetteBox.run('.gallery', {noScrollbars: true});
+}
+
+function select_random_potd () {
+  let element = document.getElementById('potd-random');
+  console.log(element);
 }
