@@ -42,6 +42,17 @@ Testing 1 2 3 Ok, bye -Menno van der Graaf</description>
     </item>
     
     <item>
+      <title>About</title>
+      <link>https://mercotui.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mercotui.com/about/</guid>
+      <description>I&#39;m an low level software engineer, with an interest in graphics programming, Linux development, and Opensource. I tend to make random stuff that I think of. Licenses  I want to thank the Free Opensource Software projects that I used to make this website &amp;#10084;   Font Awesome Used for icons   Font Awesome website    Font Awesome Free License
+-------------------------
+Font Awesome Free is free, open source, and GPL friendly.</description>
+    </item>
+    
+    <item>
       <title>Project Showcase</title>
       <link>https://mercotui.com/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
