@@ -1,0 +1,7 @@
+# git ignore everything except for the tuxmatch wasm stuff
+*
+!.gitignore
+!index.html
+!tux_match.wasm
+!qtloader.js
+!qtlogo.svg
