@@ -107,7 +107,9 @@ a:hover {
   margin: auto;
   display: block;
 }
-
+.apps_link_container.h3{
+  margin: 0;
+}
 .potd-placeholder{
   height: 30em;
   margin: auto;
@@ -167,6 +169,13 @@ li.nav-divider{
 
 li.nav > a {
     font: inherit;
+}
+
+.apps_link_container h3{
+  margin-bottom: 0;
+}
+.apps_link_container p{
+  margin: 0;
 }
 
 .content{
