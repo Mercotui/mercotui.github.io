@@ -7,3 +7,4 @@
 [submodule "apps/qt-installer-package-lister"]
 	path = apps/qt-installer-package-lister
 	url = https://github.com/Mercotui/qt-installer-package-lister
+	branch = release
