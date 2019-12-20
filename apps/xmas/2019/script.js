@@ -42,7 +42,7 @@ function set_greetings(custom_text, name_index){
   var lines =  custom_text.split('|');
   if (lines.lenght == 1){
     text_2.textContent = lines[0];
-  } else {
+  } else if (lines.lenght == 2){
     text_1.textContent = lines[0];
     text_2.textContent = lines[1];
   }

@@ -36,7 +36,7 @@ html, body {
   text-align: center;
   width: 100%;
   font-size: 40pt;
-  color: #F8B229;
+  color: #AD7C1C;
   margin: auto;
   z-index: 9;
 }
@@ -46,7 +46,7 @@ html, body {
 #back_light {
   width: 100%;
   height: 100%;
-  background: linear-gradient(#0d2147, #143370);
+  background: linear-gradient(#010307, #0C1E43);
   border-radius: 50%;
   z-index: 1;
   opacity: 0;
