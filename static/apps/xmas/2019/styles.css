@@ -36,7 +36,7 @@ html, body {
   text-align: center;
   width: 100%;
   font-size: 40pt;
-  color: #F8B229;
+  color: #AD7C1C;
   margin: auto;
   z-index: 9;
 }
@@ -46,7 +46,7 @@ html, body {
 #back_light {
   width: 100%;
   height: 100%;
-  background: linear-gradient(#0d2147, #143370);
+  background: linear-gradient(#010307, #0C1E43, #323269);
   border-radius: 50%;
   z-index: 1;
   opacity: 0;
@@ -58,13 +58,22 @@ html, body {
   z-index: 2;
 }
 
+#lights_canvas {
+  margin: 0 auto;
+  bottom: 18%;
+  left: 0;
+  right: 0;
+  height: 50%;
+  z-index: 3;
+}
+
 #tree {
   margin: 0 auto;
   bottom: 18%;
   left: 0;
   right: 0;
-  height: 60%;
-  z-index: 3;
+  height: 50%;
+  z-index: 4;
   filter: saturate(0);
 }
 
