@@ -6,6 +6,7 @@ window.addEventListener('resize', function(){
 }, false);
 
 window.addEventListener('load', function(){
+
   var audio = new Audio('silentnight.mp3');
 
   var query_string = window.location.search.substr(1);
@@ -19,23 +20,59 @@ window.addEventListener('load', function(){
   jsCanvasSnow.start();
 
   tree_lights.init();
-  tree_lights.start();
 
   // Event handlers
   document.ontouchstart = function(){
+    animate_cycle();
     animate_lightup();
+    tree_lights.start();
     jsCanvasSnow.startsnow();
     audio.play();
+    audio_fadein(audio);
   };
   document.ontouchend = function(){
     animate_shutdown();
-    audio.pause();
+    tree_lights.stop();
+    audio_fadeout(audio);
     jsCanvasSnow.stopsnow();
   };
 
   document.onmousedown = document.ontouchstart;
   document.onmouseup = document.ontouchend;
 }, false);
+
+function audio_fadein(q){
+    var InT = 0;
+    var setVolume = 0.4; // Target volume level for new song
+    var speed = 0.05; // Rate of increase
+    q.volume = InT;
+    var eAudio = setInterval(function(){
+      InT += speed;
+      q.volume = InT.toFixed(1);
+      if(InT.toFixed(1) >= setVolume){
+        clearInterval(eAudio);
+        //alert('clearInterval eAudio'+ InT.toFixed(1));
+      };
+    },50);
+};
+
+function audio_fadeout(q){
+  if(q.volume){
+    var InT = 0.4;
+    var setVolume = 0;
+    var speed = 0.005;  // Rate of volume decrease
+    q.volume = InT;
+    var fAudio = setInterval(function(){
+      InT -= speed;
+      q.volume = InT.toFixed(1);
+      if(InT.toFixed(1) <= setVolume){
+        clearInterval(fAudio);
+        q.pause();
+        //alert('clearInterval fAudio'+ InT.toFixed(1));
+      };
+    },50);
+  };
+};
 
 function set_greetings(custom_text, name_index){
   var text_1 = document.getElementById('text_1');
@@ -65,6 +102,26 @@ function set_greetings(custom_text, name_index){
       text_4.textContent = "Menno";
       break;
     default:
+  }
+}
+
+var cycle_started = false;
+function animate_cycle() {
+  if (!cycle_started) {
+    cycle_started = true;
+    setInterval(function () {
+      var train = document.getElementById('train');
+      train.classList.remove('cycle');
+      void train.offsetWidth;
+      train.classList.add('cycle');
+    }, 20000);
+
+    setInterval(function () {
+      var bike = document.getElementById('bike');
+      bike.classList.remove('cycle');
+      void bike.offsetWidth;
+      bike.classList.add('cycle');
+    }, 15000);
   }
 }
 

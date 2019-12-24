@@ -10,6 +10,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   background-color:#000;
   user-select: none;
@@ -35,7 +36,7 @@ html, body {
   font-family: 'Patrick Hand SC', cursive;
   text-align: center;
   width: 100%;
-  font-size: 40pt;
+  font-size: 7vmin;
   color: #AD7C1C;
   margin: auto;
   z-index: 9;
@@ -55,6 +56,29 @@ html, body {
 #arnhem {
   width: 100%;
   height: 100%;
+  z-index: 2;
+}
+
+#bike {
+  width: 2%;
+  transform: rotate(-15deg);
+  bottom:24.8%;
+  left:4%;
+  z-index: 2;
+}
+
+#train_box {
+  width: 30%;
+  height: 100%;
+  bottom: 0%;
+  right: 0%;
+  overflow: hidden;
+}
+#train {
+  height: 3%;
+  transform: rotate(10.5deg);
+  bottom:34%;
+  right:93%;
   z-index: 2;
 }
 
@@ -92,12 +116,12 @@ html, body {
 }
 
 #text_3 {
-  bottom:2em;
+  bottom:1.5em;
   opacity: 0;
 }
 
 #text_4 {
-  bottom:1em;
+  bottom:0.5em;
   opacity: 0;
 }
 
