@@ -6,8 +6,8 @@ window.addEventListener('resize', function(){
 }, false);
 
 window.addEventListener('load', function(){
-
   var audio = new Audio('silentnight.mp3');
+  audio.volume = 0.0;
 
   var query_string = window.location.search.substr(1);
   var hash_string = window.location.hash.substr(1);
@@ -23,55 +23,56 @@ window.addEventListener('load', function(){
 
   // Event handlers
   document.ontouchstart = function(){
+    var text_hint = document.getElementById('text_hint');
+    text_hint.textContent = "Hold for Lights";
+
     animate_cycle();
     animate_lightup();
     tree_lights.start();
     jsCanvasSnow.startsnow();
-    audio.play();
-    audio_fadein(audio);
+    audio_fade(audio, 1.0);
   };
   document.ontouchend = function(){
     animate_shutdown();
     tree_lights.stop();
-    audio_fadeout(audio);
     jsCanvasSnow.stopsnow();
+    audio_fade(audio, 0.0);
   };
 
   document.onmousedown = document.ontouchstart;
   document.onmouseup = document.ontouchend;
 }, false);
 
-function audio_fadein(q){
-    var InT = 0;
-    var setVolume = 0.4; // Target volume level for new song
-    var speed = 0.05; // Rate of increase
-    q.volume = InT;
-    var eAudio = setInterval(function(){
-      InT += speed;
-      q.volume = InT.toFixed(1);
-      if(InT.toFixed(1) >= setVolume){
-        clearInterval(eAudio);
-        //alert('clearInterval eAudio'+ InT.toFixed(1));
-      };
-    },50);
-};
+var fade_interval;
+function audio_fade(audio, setpoint){
+  clearInterval(fade_interval);
+  audio.play();
 
-function audio_fadeout(q){
-  if(q.volume){
-    var InT = 0.4;
-    var setVolume = 0;
-    var speed = 0.005;  // Rate of volume decrease
-    q.volume = InT;
-    var fAudio = setInterval(function(){
-      InT -= speed;
-      q.volume = InT.toFixed(1);
-      if(InT.toFixed(1) <= setVolume){
-        clearInterval(fAudio);
-        q.pause();
-        //alert('clearInterval fAudio'+ InT.toFixed(1));
-      };
-    },50);
-  };
+  var setVolume = setpoint;
+  var delta = setVolume - audio.volume;
+  if (delta > 0.0){
+    var speed = 0.1;
+  } else {
+    var speed = -0.01;
+  }
+
+  fade_interval = setInterval(function(){
+    var new_volume = audio.volume + speed;
+    new_volume = Math.max(new_volume,0.0);
+    new_volume = Math.min(new_volume,1.0);
+    audio.volume = new_volume;
+
+    if (delta > 0.0) {
+      if (audio.volume >= setVolume || audio.volume >= 1.0) {
+        clearInterval(fade_interval);
+      }
+    } else {
+      if (audio.volume <= setVolume || audio.volume <= 0.0) {
+        clearInterval(fade_interval);
+        audio.pause();
+      }
+    }
+  },50);
 };
 
 function set_greetings(custom_text, name_index){
@@ -87,6 +88,7 @@ function set_greetings(custom_text, name_index){
     text_1.textContent = lines[0];
     text_2.textContent = lines[1];
   }
+
 
   switch (name_index) {
     case '1':
@@ -173,8 +175,8 @@ function animate_shutdown() {
   text_2.classList.add('fadeout');
 
   var text_hint = document.getElementById('text_hint');
-  // text_hint.classList.remove('fadeout');
-  // text_hint.classList.add('fadein');
+  text_hint.classList.remove('fadeout');
+  text_hint.classList.add('fadein');
 
   var text_3 = document.getElementById('text_3');
   text_3.classList.remove('fadein');
