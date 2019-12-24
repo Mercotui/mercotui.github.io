@@ -50,7 +50,7 @@ var tree_lights =
     mask_image.src = 'tree_lightmask.svg';
 
 		this.light_amount = 1000;          // amount of lights
-		this.light_size   = [10.0 , 25.0]; // min and max size
+		this.light_size   = [this.canvas.width/30 , this.canvas.width/15]; // min and max size
 		this.light_speed  = [0.1, 1];      // min and max blink speed
 		this.light_colors = ["#f6b30a", "#e74626", "#b9221f", "#2754a8"];
 	},
