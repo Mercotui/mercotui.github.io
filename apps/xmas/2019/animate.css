@@ -7,6 +7,18 @@
   opacity: 0;
 }
 
+#bike.cycle{
+  transition: 10s linear;
+  bottom: 28%;
+  left: 19%;
+}
+
+#train.cycle{
+  transition: 8s ease-in;
+  bottom: 20.5%;
+  right: -145%;
+}
+
 #tree.fadein {
   transition: 5s;
   filter: saturate(1);
