@@ -1,6 +1,14 @@
 const imagelist = [
   
     {
+      title: "Very Distant Arnhem",
+      url: "/potd/beek_arnhem.jpg"
+    }
+    , {
+      title: "Church Window",
+      url: "/potd/beek_church.jpg"
+    }
+    , {
       title: "Brussels Tram",
       url: "/potd/brussels_tram.jpg"
     }
@@ -13,8 +21,28 @@ const imagelist = [
       url: "/potd/groningen_church.jpg"
     }
     , {
+      title: "Near Kreuzberg Market",
+      url: "/potd/kreuzberg_birds.jpg"
+    }
+    , {
+      title: "Oberbaum Before Sunset",
+      url: "/potd/kreuzberg_oberbaum.jpg"
+    }
+    , {
+      title: "Luxemburg Bank",
+      url: "/potd/luxemburg_tower.jpg"
+    }
+    , {
+      title: "Bode Museum",
+      url: "/potd/museum_doors.jpg"
+    }
+    , {
       title: "Nijmegen Sunset",
       url: "/potd/nijmegen_bridge.jpg"
+    }
+    , {
+      title: "Bend in the Saar",
+      url: "/potd/saar_bend.jpg"
     }
     , {
       title: "Sonsbeek After Drought",
@@ -23,6 +51,10 @@ const imagelist = [
     , {
       title: "Velperpoort Cat",
       url: "/potd/velperpoort_cat.jpg"
+    }
+    , {
+      title: "Venemans Mill",
+      url: "/potd/venemans.jpg"
     }
 ]
 window.onload = function () {
