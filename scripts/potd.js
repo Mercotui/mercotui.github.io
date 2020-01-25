@@ -57,6 +57,8 @@ const imagelist = [
       url: "/potd/venemans.jpg"
     }
 ]
+
+;
 window.onload = function () {
   select_random_potd();
 
