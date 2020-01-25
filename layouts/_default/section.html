@@ -2,10 +2,12 @@
   <main>
       {{ .Content }}
           <ul class="contents">
-          {{ range .Paginator.Pages }}
-              <li>{{.Title}}
+          {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+              <li>
                   <div>
-                    put content here
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <br>
+                    <br>
                     <!-- partial "summary.html" . -->
                   </div>
               </li>
