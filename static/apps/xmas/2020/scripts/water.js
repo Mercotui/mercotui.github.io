@@ -1,9 +1,9 @@
 class Wave {
-  constructor(origin, size, speed, color){
-  	this.position = new Vector2(origin.x, origin.y);
+  constructor(height, speed, offset, color){
     this.color = color
   	this.speed = speed;
-  	this.size = size;
+  	this.height = height;
+    this.offset = offset;
     this.tick = 0;
 
 
@@ -15,10 +15,10 @@ class Wave {
   	};
 
     this._calculate_bezier = function () {
-        this.Left = Math.abs(Math.pow( Math.sin(this.tick), 2 )) * 100;
-        this.Right = Math.abs(Math.pow( Math.sin((this.tick) + 10), 2 )) * 100;
-        this.LeftConstraint = Math.abs(Math.pow( Math.sin((this.tick)+2), 2 )) * 100;
-        this.RightConstraint = Math.abs(Math.pow( Math.sin((this.tick)+1), 2)) * 100;
+        this.Left = (Math.pow( Math.sin(this.tick + this.offset), 2 ) * 100) + this.height;
+        this.Right = (Math.pow( Math.sin(this.tick + this.offset + 10), 2 ) * 100) + this.height;
+        this.LeftConstraint = (Math.pow( Math.sin(this.tick + this.offset + 2), 2 ) * 100) + this.height;
+        this.RightConstraint = (Math.pow( Math.sin(this.tick + this.offset + 1), 2) * 100) + this.height;
     };
 
     this._calculate_bezier();
@@ -29,11 +29,8 @@ var water_renderer =
 {
 	canvas : null,
 	ctx : null,
-  mask : null,
-  mask_ctx : null,
 	waves : [],
 	running : false,
-  watering : true,
 	start_time : 0,
 	frame_time : 0,
 
@@ -44,10 +41,14 @@ var water_renderer =
 		this.ctx = this.canvas.getContext('2d');
     this.resize();
 
-		this.wave_amount = 3;                                             // amount of waves
-		this.wave_size   = [this.canvas.width/100 , this.canvas.width/2]; // min and max size
-		this.wave_speed  = [0.01, 1];                                     // min and max speed
-		this.wave_colors = ["#00506b", "#0b3441", "#082630"];
+    this.opacity = 0;
+    this.opacity_fadein = 0.0002;
+    this.opacity_fadeout = 0.003;
+		this.wave_amount = 3;              // amount of waves
+    this.wave_height = [0, 0.25, 0.5];
+		this.wave_offset = [0, 3.14];      // min and max size
+		this.wave_speed  = [0.01, 0.1];    // min and max speed
+		this.wave_colors = ["#082630", "#0b3441", "#00506b"];
 
     this._init_waves();
 	},
@@ -86,13 +87,12 @@ var water_renderer =
 
 		for ( var i = 0 ; i < this.wave_amount ; i++)
 		{
-			var position = new Vector2(frand(0, this.canvas.width-1), frand(0, this.canvas.height-1));
 			var speed = frand(this.wave_speed[0], this.wave_speed[1]);
-			var size = frand(this.wave_size[0], this.wave_size[1]);
+      var offset = frand(this.wave_offset[0], this.wave_offset[1]);
+			var height = this.wave_height[i] * this.canvas.height;
       var color = this.wave_colors[i];
-			// var amplitude = frand(this.pAmplitude[0], this.pAmplitude[1]);
 
-			this.waves.push(new Wave(position, size, speed, color));
+			this.waves.push(new Wave(height, speed, offset, color));
 		}
 	},
 
@@ -108,6 +108,12 @@ var water_renderer =
       wave.update(delta_time, this.running);
 		}
 
+    if (this.running) {
+      this.opacity = Math.min(1, (this.opacity + this.opacity_fadein));
+    } else {
+      this.opacity = Math.max(0, (this.opacity - this.opacity_fadeout));
+    }
+
 		// save this time for the next frame
 		this.frame_time = now_time;
 	},
@@ -115,9 +121,12 @@ var water_renderer =
 	_draw : function()
 	{
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+    // draw the waves
 		for ( var i = 0 ; i < this.waves.length ; i++) {
       var wave = this.waves[i];
 
+      // outline the wave
       this.ctx.beginPath();
       this.ctx.moveTo(0, wave.Left);
       // ctx.lineTo(canvas.width, randomRight);
@@ -127,10 +136,11 @@ var water_renderer =
       this.ctx.lineTo(0, wave.Left);
       this.ctx.closePath();
 
-      var opacity = "ff";//("00" + Math.round(wave.opacity * 0xFF).toString(16)).slice(-2);
+      // convert opacity from range [0,1] to string hex value between ["00","FF"]
+      var opacity = ("00" + Math.round(this.opacity * 0xFF).toString(16)).slice(-2);
+
       this.ctx.fillStyle = wave.color + opacity;
       this.ctx.fill();
-      // this.ctx.fillRect(wave.position.x - (wave.size/2), wave.position.y - (wave.size/2), wave.size, wave.size);
     }
 	},
 

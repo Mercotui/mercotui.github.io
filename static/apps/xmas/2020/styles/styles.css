@@ -23,6 +23,7 @@ html, body {
 
   background-color:#080B0C;
   overflow: hidden;
+  z-index: 0;
 }
 
 .inner {
@@ -61,11 +62,33 @@ html, body {
 
 #tower {
   margin: 0 auto;
-  height: 60%;
+  height: 61%; /* 1% extra to fill pixel gaps */
   top: 0;
   left: 0;
   right: 0;
   z-index: 3;
+}
+
+#ground {
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 41%;
+  width: 100%;
+  z-index: 3;
+  background: black;
+}
+
+#bridge {
+  margin: 0 auto;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  height: 10%;
+  width: 100%;
+  z-index: 5;
+  color: "red";
 }
 
 #water_canvas {
@@ -73,8 +96,7 @@ html, body {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 40%;
+  height: 41%;
   width: 100%;
-  z-index: 10;
-  color: #AD7C1C;
+  z-index: 6;
 }
