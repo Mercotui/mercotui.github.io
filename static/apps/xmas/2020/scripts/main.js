@@ -11,30 +11,82 @@ window.addEventListener('load', function(){
   var query_string = window.location.search.substr(1);
   var hash_string = window.location.hash.substr(1);
   var decoded_string = window.atob(query_string);
+  var playing = false;
+  var muted = false;
   // set_greetings(decoded_string, hash_string);
 
   snow_renderer.init();
   water_renderer.init();
 
   // Event handlers
-  document.ontouchstart = function(){
-    animate_cycle();
-    animate_lightup();
-    audio_fade(audio, 1.0);
+  var button_play = document.getElementById('buttonPlay');
+  button_play.onclick = function(event){
+    if (controlls_enabled === true) {
+      event.stopImmediatePropagation();
+      if (playing != true){
+        playing = true;
+        animate_cycle();
+        animate_lightup();
+        audio_fade(audio, 1.0);
 
-    snow_renderer.start();
-    water_renderer.start();
-  };
-  document.ontouchend = function(){
-    animate_shutdown();
-    audio_fade(audio, 0.0);
+        snow_renderer.start();
+        water_renderer.start();
 
-    snow_renderer.stop();
-    water_renderer.stop();
-  };
+        button_play.src = "assets/pause.svg";
+      } else {
+        playing = false;
+        animate_shutdown();
+        audio_fade(audio, 0.0);
 
-  document.onmousedown = document.ontouchstart;
-  document.onmouseup = document.ontouchend;
+        snow_renderer.stop();
+        water_renderer.stop();
+
+        button_play.src = "assets/play.svg";
+      }
+
+      if (playing && !muted){
+        audio_fade(audio, 1.0);
+      } else {
+        audio_fade(audio, 0.0);
+      }
+    }
+  }
+
+  var button_mute = document.getElementById('buttonMute');
+  button_mute.onclick = function(event){
+    if (controlls_enabled === true) {
+      event.stopImmediatePropagation();
+      if (muted) {
+        muted = false;
+        button_mute.src = "assets/mute.svg";
+      } else {
+        muted = true;
+        button_mute.src = "assets/music.svg";
+      }
+
+      if (playing && !muted){
+        audio_fade(audio, 1.0);
+      } else {
+        audio.volume = 0;
+        audio.pause();
+      }
+    }
+  }
+
+  var button_info = document.getElementById('buttonInfo');
+  button_info.onclick = function(event){
+    if (controlls_enabled === true) {
+      event.stopImmediatePropagation();
+      window.open('https://github.com/Mercotui/mercotui.github.io/tree/master/apps/xmas/2020', '_blank');
+    }
+  }
+
+
+  document.onclick = function() {
+    show_controls();
+    start_controls_timer();
+  }
+  show_controls();
 }, false);
 
 var fade_interval;
@@ -112,10 +164,45 @@ function animate_lightup() {
   var back_light = document.getElementById('back_light');
   back_light.classList.remove('fadeout');
   back_light.classList.add('fadein');
+
+  var bridge = document.getElementById('bridge');
+  bridge.classList.remove('fadeout');
+  bridge.classList.add('fadein');
+
+  var controlls = document.getElementById('controlls');
+  controlls.classList.remove('fadein');
+  controlls.classList.add('fadeout');
 }
 
 function animate_shutdown() {
   var back_light = document.getElementById('back_light');
   back_light.classList.remove('fadein');
   back_light.classList.add('fadeout');
+
+  var bridge = document.getElementById('bridge');
+  bridge.classList.remove('fadein');
+  bridge.classList.add('fadeout');
+}
+
+var controlls_timeout;
+var controlls_enabled;
+function start_controls_timer() {
+  clearInterval(controlls_timeout);
+  controlls_timeout = setTimeout(hide_controls, 4000);
+}
+
+function hide_controls() {
+  var controlls = document.getElementById('controlls');
+  controlls.classList.remove('fadein');
+  controlls.classList.add('fadeout');
+
+  controlls_enabled = false;
+}
+
+function show_controls() {
+  var controlls = document.getElementById('controlls');
+  controlls.classList.remove('fadeout');
+  controlls.classList.add('fadein');
+
+  controlls_enabled = true;
 }
