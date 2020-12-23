@@ -19,13 +19,22 @@
   right: -145%;
 }
 
-#tree.fadein {
+#bridge.fadein {
   transition: 5s;
-  filter: saturate(1);
+  filter: brightness(1);
 }
-#tree.fadeout {
-  transition: 8s;
-  filter: saturate(0);
+#bridge.fadeout {
+  transition: 5s;
+  filter: brightness(0);
+}
+
+#controlls.fadein {
+  transition: 4s;
+  opacity: 1;
+}
+#controlls.fadeout {
+  transition: 0.5s;
+  opacity: 0;
 }
 
 /* Texts */

@@ -26,6 +26,21 @@ html, body {
   z-index: 0;
 }
 
+@media (max-aspect-ratio: 1) { /* for square and slimmer viewport */
+   #content {
+    width: 62vmax; /* golden blablabla */
+    height: 100vmax;
+  }
+}
+
+@media (max-aspect-ratio: 0.62) { /* once viewport is taller/slimmer than the card */
+   #content {
+    width: 100vmin; /* golden blablabla */
+    height: 162vmin;
+  }
+}
+
+
 .inner {
   position: absolute;
 }
@@ -82,13 +97,11 @@ html, body {
 
 #bridge {
   margin: 0 auto;
-  bottom: 20%;
+  bottom: 35%;
   left: 0;
-  right: 0;
-  height: 10%;
   width: 100%;
   z-index: 5;
-  color: "red";
+  filter: brightness(0);
 }
 
 #water_canvas {
@@ -99,4 +112,40 @@ html, body {
   height: 41%;
   width: 100%;
   z-index: 6;
+}
+
+#controlls {
+  margin: 0 auto;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle closest-corner at bottom, #323269ff, #01030700);
+  opacity: 0;
+  z-index: 10;
+}
+
+#buttonMute {
+  margin: auto;
+  left: 20%;
+  bottom: 2%;
+  height: 5%;
+  z-index: 11;
+}
+
+#buttonPlay {
+  margin: auto;
+  left: 40%;
+  right: 40%;
+  bottom: 1%;
+  height: 10%;
+  z-index: 11;
+}
+
+#buttonInfo {
+  margin: auto;
+  right: 20%;
+  bottom: 2%;
+  height: 5%;
+  width: height;
+  z-index: 11;
 }
