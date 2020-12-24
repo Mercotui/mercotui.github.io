@@ -171,10 +171,14 @@ function animate_lightup() {
   var back_light = document.getElementById('back_light');
   back_light.classList.remove('fadeout');
   back_light.classList.add('fadein');
-
+  
   var bridge = document.getElementById('bridge');
   bridge.classList.remove('fadeout');
   bridge.classList.add('fadein');
+
+  var water = document.getElementById('water_canvas');
+  water.classList.remove('fadeout');
+  water.classList.add('fadein');
 
   var controlls = document.getElementById('controlls');
   controlls.classList.remove('fadein');
@@ -189,6 +193,10 @@ function animate_shutdown() {
   var bridge = document.getElementById('bridge');
   bridge.classList.remove('fadein');
   bridge.classList.add('fadeout');
+
+  var water = document.getElementById('water_canvas');
+  water.classList.remove('fadein');
+  water.classList.add('fadeout');
 }
 
 var controlls_timeout;
