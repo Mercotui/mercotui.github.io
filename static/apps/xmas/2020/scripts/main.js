@@ -157,6 +157,13 @@ var cycle_started = false;
 function animate_cycle() {
   if (!cycle_started) {
     cycle_started = true;
+
+    setInterval(function () {
+      var ubahn = document.getElementById('ubahn');
+      ubahn.classList.remove('cycle');
+      void ubahn.offsetWidth;
+      ubahn.classList.add('cycle');
+    }, 25000);
   }
 }
 

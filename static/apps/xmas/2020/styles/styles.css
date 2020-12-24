@@ -26,14 +26,14 @@ html, body {
   z-index: 0;
 }
 
-@media (max-aspect-ratio: 1) { /* for square and slimmer viewport */
+@media (max-aspect-ratio: 1/1) { /* for square and slimmer viewport */
    #content {
     width: 62vmax; /* golden blablabla */
     height: 100vmax;
   }
 }
 
-@media (max-aspect-ratio: 0.62) { /* once viewport is taller/slimmer than the card */
+@media (max-aspect-ratio: 62/100) { /* once viewport is taller/slimmer than the card */
    #content {
     width: 100vmin; /* golden blablabla */
     height: 162vmin;
@@ -95,12 +95,23 @@ html, body {
   background: black;
 }
 
+#ubahn {
+  margin: 0 auto;
+  bottom: -169%;
+  width: 50%;
+  left: 25%;
+  z-index: 5;
+  transform: rotate(-15deg);
+  transform-origin: bottom center;
+  filter: brightness(0.8);
+}
+
 #bridge {
   margin: 0 auto;
-  bottom: 35%;
+  bottom: 38%;
   left: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 6;
   filter: brightness(0);
 }
 
@@ -111,7 +122,7 @@ html, body {
   right: 0;
   height: 41%;
   width: 100%;
-  z-index: 6;
+  z-index: 7;
 }
 
 #controlls {
@@ -126,7 +137,7 @@ html, body {
 
 #buttonMute {
   margin: auto;
-  left: 20%;
+  left: 25%;
   bottom: 2%;
   height: 5%;
   z-index: 11;
@@ -143,7 +154,7 @@ html, body {
 
 #buttonInfo {
   margin: auto;
-  right: 20%;
+  right: 25%;
   bottom: 2%;
   height: 5%;
   width: height;
