@@ -27,6 +27,15 @@
   filter: brightness(0);
 }
 
+#water_canvas.fadein {
+  transition: 40s ease-in;
+  filter: brightness(1);
+}
+#water_canvas.fadeout {
+  transition: 5s;
+  filter: brightness(0);
+}
+
 #controlls.fadein {
   transition: 4s;
   opacity: 1;

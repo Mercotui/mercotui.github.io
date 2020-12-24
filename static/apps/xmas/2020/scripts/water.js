@@ -1,9 +1,10 @@
 class Wave {
-  constructor(height, speed, offset, color){
+  constructor(height, speed, offset, amplitude, color){
     this.color = color
   	this.speed = speed;
   	this.height = height;
     this.offset = offset;
+    this.amplitude = amplitude;
     this.tick = 0;
 
 
@@ -15,10 +16,10 @@ class Wave {
   	};
 
     this._calculate_bezier = function () {
-        this.Left = (Math.pow( Math.sin(this.tick + this.offset), 2 ) * 100) + this.height;
-        this.Right = (Math.pow( Math.sin(this.tick + this.offset + 10), 2 ) * 100) + this.height;
-        this.LeftConstraint = (Math.pow( Math.sin(this.tick + this.offset + 2), 2 ) * 100) + this.height;
-        this.RightConstraint = (Math.pow( Math.sin(this.tick + this.offset + 1), 2) * 100) + this.height;
+        this.Left = (Math.pow( Math.sin(this.tick + this.offset), 2 ) * this.amplitude) + this.height;
+        this.Right = (Math.pow( Math.sin(this.tick + this.offset + 10), 2 ) * this.amplitude) + this.height;
+        this.LeftConstraint = (Math.pow( Math.sin(this.tick + this.offset + 2), 2 ) * this.amplitude) + this.height;
+        this.RightConstraint = (Math.pow( Math.sin(this.tick + this.offset + 1), 2) * this.amplitude) + this.height;
     };
 
     this._calculate_bezier();
@@ -90,9 +91,10 @@ var water_renderer =
 			var speed = frand(this.wave_speed[0], this.wave_speed[1]);
       var offset = frand(this.wave_offset[0], this.wave_offset[1]);
 			var height = this.wave_height[i] * this.canvas.height;
+      var amplitude = this.canvas.height / (this.wave_amount + 1);
       var color = this.wave_colors[i];
 
-			this.waves.push(new Wave(height, speed, offset, color));
+			this.waves.push(new Wave(height, speed, offset, amplitude, color));
 		}
 	},
 
@@ -136,10 +138,7 @@ var water_renderer =
       this.ctx.lineTo(0, wave.Left);
       this.ctx.closePath();
 
-      // convert opacity from range [0,1] to string hex value between ["00","FF"]
-      var opacity = ("00" + Math.round(this.opacity * 0xFF).toString(16)).slice(-2);
-
-      this.ctx.fillStyle = wave.color + opacity;
+      this.ctx.fillStyle = wave.color + "ff";
       this.ctx.fill();
     }
 	},
