@@ -1,0 +1,74 @@
+#back_light.fadein {
+  transition: 5s;
+  opacity: 1;
+}
+#back_light.fadeout {
+  transition: 5s;
+  opacity: 0;
+}
+
+#bike.cycle{
+  transition: 10s linear;
+  bottom: 28%;
+  left: 19%;
+}
+
+#ubahn.cycle{
+  transition: 15s linear;
+  transform: rotate(15deg);
+}
+
+#bridge.fadein {
+  transition: 10s;
+  filter: brightness(0.7);
+}
+#bridge.fadeout {
+  transition: 5s;
+  filter: brightness(0);
+}
+
+#water_canvas.fadein {
+  transition: 40s ease-in;
+  filter: brightness(1);
+}
+#water_canvas.fadeout {
+  transition: 5s;
+  filter: brightness(0);
+}
+
+#controlls.fadein {
+  transition: 4s;
+  opacity: 1;
+}
+#controlls.fadeout {
+  transition: 0.5s;
+  opacity: 0;
+}
+
+/* Texts */
+#text_1.fadein {
+  transition: 5s;
+  opacity: 1;
+}
+#text_1.fadeout {
+  transition: 8s;
+  opacity: 0;
+}
+
+#text_2.fadein {
+  transition: 6s;
+  opacity: 1;
+}
+#text_2.fadeout {
+  transition: 8s;
+  opacity: 0;
+}
+
+#text_3.fadein {
+  transition: 10s;
+  opacity: 1;
+}
+#text_3.fadeout {
+  transition: 8s;
+  opacity: 0;
+}
