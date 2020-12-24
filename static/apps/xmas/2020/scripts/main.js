@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
   var decoded_string = window.atob(query_string);
   var playing = false;
   var muted = false;
-  // set_greetings(decoded_string, hash_string);
+  set_greetings(decoded_string, hash_string);
 
   snow_renderer.init();
   water_renderer.init();
@@ -125,10 +125,9 @@ function set_greetings(custom_text, name_index){
   var text_1 = document.getElementById('text_1');
   var text_2 = document.getElementById('text_2');
   var text_3 = document.getElementById('text_3');
-  var text_4 = document.getElementById('text_4');
 
   var lines =  custom_text.split('|');
-  if (lines.length == 1){
+  if (lines.length == 1 && (lines[0].length > 0)){
     text_2.textContent = lines[0];
   } else if (lines.length == 2){
     text_1.textContent = lines[0];
@@ -138,16 +137,13 @@ function set_greetings(custom_text, name_index){
 
   switch (name_index) {
     case '1':
-      text_3.textContent = "Season's Greetings,";
-      text_4.textContent = "Mercotui";
+      text_3.textContent = "Mercotui";
       break;
     case '2':
-      text_3.textContent = "Bork Bork Bork,";
-      text_4.textContent = "Mercotui";
+      text_3.textContent = "Menno";
       break;
     case '3':
-      text_3.textContent = "Liefs,";
-      text_4.textContent = "Menno";
+      text_3.textContent = "Liefs, Menno";
       break;
     default:
   }
@@ -171,7 +167,7 @@ function animate_lightup() {
   var back_light = document.getElementById('back_light');
   back_light.classList.remove('fadeout');
   back_light.classList.add('fadein');
-  
+
   var bridge = document.getElementById('bridge');
   bridge.classList.remove('fadeout');
   bridge.classList.add('fadein');
@@ -179,6 +175,18 @@ function animate_lightup() {
   var water = document.getElementById('water_canvas');
   water.classList.remove('fadeout');
   water.classList.add('fadein');
+
+  var text_1 = document.getElementById('text_1');
+  text_1.classList.remove('fadeout');
+  text_1.classList.add('fadein');
+
+  var text_2 = document.getElementById('text_2');
+  text_2.classList.remove('fadeout');
+  text_2.classList.add('fadein');
+
+  var text_3 = document.getElementById('text_3');
+  text_3.classList.remove('fadeout');
+  text_3.classList.add('fadein');
 
   var controlls = document.getElementById('controlls');
   controlls.classList.remove('fadein');
@@ -197,6 +205,18 @@ function animate_shutdown() {
   var water = document.getElementById('water_canvas');
   water.classList.remove('fadein');
   water.classList.add('fadeout');
+
+  var text_1 = document.getElementById('text_1');
+  text_1.classList.remove('fadein');
+  text_1.classList.add('fadeout');
+
+  var text_2 = document.getElementById('text_2');
+  text_2.classList.remove('fadein');
+  text_2.classList.add('fadeout');
+
+  var text_3 = document.getElementById('text_3');
+  text_3.classList.remove('fadein');
+  text_3.classList.add('fadeout');
 }
 
 var controlls_timeout;

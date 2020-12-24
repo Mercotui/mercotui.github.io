@@ -46,15 +46,6 @@
 }
 
 /* Texts */
-#text_hint.fadein {
-  transition: 10s;
-  opacity: 0.4;
-}
-#text_hint.fadeout {
-  transition: 0.2s;
-  opacity: 0;
-}
-
 #text_1.fadein {
   transition: 5s;
   opacity: 1;
@@ -74,19 +65,10 @@
 }
 
 #text_3.fadein {
-  transition: 7s;
-  opacity: 1;
-}
-#text_3.fadeout {
-  transition: 8s;
-  opacity: 0;
-}
-
-#text_4.fadein {
   transition: 10s;
   opacity: 1;
 }
-#text_4.fadeout {
+#text_3.fadeout {
   transition: 8s;
   opacity: 0;
 }

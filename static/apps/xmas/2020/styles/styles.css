@@ -46,11 +46,11 @@ html, body {
 }
 
 .greetings {
-  font-family: 'Patrick Hand SC', cursive;
+  font-family: 'Space Grotesk', sans-serif;
   text-align: center;
   width: 100%;
-  font-size: 7vmin;
-  color: #AD7C1C;
+  font-size: 5vmin;
+  color: #CEDEDF;
   margin: auto;
   z-index: 9;
 }
@@ -124,6 +124,21 @@ html, body {
   width: 100%;
   z-index: 7;
   filter: brightness(0);
+}
+
+#text_1 {
+  bottom: 5.4em;
+  opacity: 0;
+}
+
+#text_2 {
+  bottom: 4.2em;
+  opacity: 0;
+}
+
+#text_3 {
+  bottom:3em;
+  opacity: 0;
 }
 
 #controlls {
