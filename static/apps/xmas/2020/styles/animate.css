@@ -13,15 +13,14 @@
   left: 19%;
 }
 
-#train.cycle{
-  transition: 8s ease-in;
-  bottom: 20.5%;
-  right: -145%;
+#ubahn.cycle{
+  transition: 15s linear;
+  transform: rotate(15deg);
 }
 
 #bridge.fadein {
-  transition: 5s;
-  filter: brightness(1);
+  transition: 10s;
+  filter: brightness(0.7);
 }
 #bridge.fadeout {
   transition: 5s;
