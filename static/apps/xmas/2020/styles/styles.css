@@ -128,16 +128,19 @@ html, body {
 
 #text_1 {
   bottom: 5.4em;
+  z-index: 8;
   opacity: 0;
 }
 
 #text_2 {
   bottom: 4.2em;
+  z-index: 8;
   opacity: 0;
 }
 
 #text_3 {
   bottom:3em;
+  z-index: 8;
   opacity: 0;
 }
 
