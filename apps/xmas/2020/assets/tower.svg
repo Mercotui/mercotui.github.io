@@ -23,19 +23,19 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.5"
-     inkscape:cx="637.65599"
-     inkscape:cy="409.40876"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="915.99359"
+     inkscape:cy="419.08298"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1920"
-     inkscape:window-height="983"
+     inkscape:window-height="992"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
-     fit-margin-top="50.5"
+     fit-margin-top="20"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0" />
@@ -57,15 +57,15 @@
      id="layer1"
      transform="translate(-57.527231,37.857346)">
     <circle
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.197652;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.177414;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path873"
        cx="108.47697"
        cy="45.230778"
-       r="30.70927" />
+       r="27.564859" />
     <path
-       id="path1053-7"
-       style="fill:#000000;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-       d="M 111.92537,-27.301918 V 12.774945 C 113.4984,224.4832 159.20791,258.55508 159.20791,258.55508 H 57.926066 c 0,0 45.709494,-34.07188 47.282534,-245.780135 v -40.076863 z"
-       sodipodi:nodetypes="cccccc" />
+       id="path1053-7-6"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 111.92537,-27.301918 V 117.82198 c 1.04546,140.70354 47.28254,140.73309 47.28254,140.73309 m 0,10e-6 H 57.926066 c 0,0 46.233874,0.0972 47.282534,-141.03707 V -27.301918 h 6.71677"
+       sodipodi:nodetypes="cccccccc" />
   </g>
 </svg>
