@@ -1,0 +1,49 @@
+body {
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f1f1f2;
+}
+
+a {
+    color: #f1f1f2;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #c4c4c4;
+}
+
+
+#sidepanel {
+    overflow: hidden;
+    float: right;
+    height: 100vh;
+    background-color: #01848f;
+    width: 20%;
+    min-width: 100px;
+    margin-right: 0;
+    padding: 3em;
+    z-index: 2;
+}
+
+#canvas {
+    overflow: hidden;
+    margin: 1em;
+    float: left;
+    font-family: sans-serif monospace;
+    font-size: 45px;
+}
+
+#canvas table {
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 1em;
+}
+
+#canvas td {
+    width: 1em;
+}
