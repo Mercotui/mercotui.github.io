@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mercotui / Emoji Motives</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" charset="utf-8"></script>
+</head>
+<body>
+<div id="canvas"></div>
+
+<div id="sidepanel">
+  <a href="../"><- back</a>
+  <br>
+  <h1>Emoji Motives</h1>
+  Generate colorful patterns!
+  <h2>Canvas</h2>
+  <label>
+    Width:<br>
+    <input id="canvasWidth" type="number" value="600"/>
+  </label>
+  <br>
+  <label>
+    Height:<br>
+    <input id="canvasHeight" type="number" value="600"/>
+  </label>
+  <br>
+  <label>
+    Color:<br>
+    <input id="canvasColor" type="color" value="#01464d"/>
+  </label>
+
+  <h2>Pattern</h2>
+  <label>
+    Characters:<br>
+    <textarea rows="4" id="characters" name="characters">🌸,💮,🪷,🏵️,🌹,🌺,🌻,🌼,🌷,🪻,🌱,🪴,🌲,🌳,🌴,🌵,🌾,🌿,☘️,🍀,🍁,🍂,🍃</textarea>
+  </label>
+  <br>
+  <label>
+    Padding Characters:<br>
+    <input id="paddingChar" type="text" value=" "/>
+  </label>
+  <br>
+  <label>
+    Offset:<br>
+    <input id="offset" type="number" value="5"/>
+  </label>
+  <br>
+  <label>
+    Columns:<br>
+    <input id="columns" type="number" value="12"/>
+  </label>
+  <br>
+  <label>
+    Rows:<br>
+    <input id="rows" type="number" value="10"/>
+  </label>
+  <br>
+  <br>
+  <button id="regenerate">
+    Regenerate
+  </button>
+
+</div>
+</body>
+</html>
