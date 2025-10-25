@@ -1,36 +1,31 @@
-window.onload = function () {
+function set_potd() {
   select_random_potd();
-
-  baguetteBox.run('.gallery', {noScrollbars: true});
+  baguetteBox.run('.gallery', {noScrollbars: true, animation: false});
 }
 
-function select_random_potd () {
+function select_random_potd() {
   let element = document.getElementById('potd-random');
 
-  if (element){
-    var daily_random_number = javascript_is_dumb_random(day());
-    daily_random_number = Math.floor(daily_random_number *= imagelist.length);
+  const daily_random_index = Math.floor(javascript_is_dumb_random(day()) * imagelist.length);
+  let random_image = imagelist[daily_random_index];
 
-    let random_image = imagelist[daily_random_number];
+  element.src = random_image.url;
+  element.className = "potd";
 
-    element.src = random_image.url;
-    element.className = "potd";
+  let container_element = document.getElementById('potd-random-container');
+  if (container_element) {
+    container_element.href = random_image.url;
 
-    let container_element = document.getElementById('potd-random-container');
-    if (container_element) {
-      container_element.href = random_image.url;
-
-    }
   }
 }
 
 function day() {
-  var now = new Date();
-  var fullDaysSinceEpoch = Math.floor(now/8.64e7);
-  return fullDaysSinceEpoch;
+  // Divide current timestamp by milliseconds per day, to return total days since epoch
+  return Math.floor(new Date() / 8.64e7);
 }
 
 function javascript_is_dumb_random(seed) {
-    var x = Math.sin(seed) * 10000;
-    return x - Math.floor(x);
+  // Guess JS doesn't have a random generator that takes a seed value 🤷
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
 }

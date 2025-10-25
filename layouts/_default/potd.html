@@ -1,12 +1,19 @@
 {{ define "extra_header"}}
-  <script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
+<script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
+<script>
+  window.onload = function () {
+    baguetteBox.run('.gallery', {noScrollbars: true});
+  }
+</script>
 
+<!-- The following block processes the resources of the POTD page, and creates a script that picks one picture to display on the front page -->
   {{ $imagelist := resources.Get "imagelist_template.js" | resources.ExecuteAsTemplate "imagelist.js" . }}
   {{ $potdscript := resources.Get "potdscript.js"}}
   {{ $potdscript := slice $imagelist $potdscript | resources.Concat "scripts/potd.js" }}
   <script src="{{ $potdscript.Permalink }}" charset="utf-8"></script>
 
-  <link rel="stylesheet" href="/styles/baguetteBox.min.css">
+<link rel="stylesheet" href="/styles/baguetteBox.min.css">
+<link rel="stylesheet" href="/styles/image-list.css">
 {{ end }}
 {{ define "main" }}
 
@@ -14,19 +21,21 @@
 {{ .Content }}
 
 
-<div class="gallery">
+<div class="gallery image-list">
   {{ range .Resources }}
-    <a href="{{.RelPermalink}}">
-      <img src="{{ .RelPermalink }}" class="potd"></img>
+  {{ $thumbnail := .Process "resize x500 center" }}
+  <div class="image-list-item">
+    <a href="{{ .RelPermalink }}" target="_blank" data-caption="{{ .Title }}">
+      <img src="{{ $thumbnail.RelPermalink }}" class="image-list-thumbnail" alt="{{ .Title }}"/>
     </a>
-    <div about="{{ .RelPermalink }}">
+    <div about="{{ .RelPermalink }}" style="display: none;">
       <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">{{ .Title }}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://mercotui.com/potd" property="cc:attributionName" rel="cc:attributionURL">Menno van der Graaf</a>,
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a> <br/>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    </div><br>
+    </div>
+  </div>
   {{ end }}
 </div>
-
 
 
 {{ end }}

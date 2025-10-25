@@ -1,7 +1,6 @@
 baseURL = "https://mercotui.com"
 languageCode = "en-us"
 title = "Mercotui"
-publishdir = "mercotui.github.io"
 
 [params]
 nav_name = "home" # set home as default value

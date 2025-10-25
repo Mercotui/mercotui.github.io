@@ -12,8 +12,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Publish Site
-        uses: chabad360/hugo-gh-pages@master
-        with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
+      - name: Deploy the site
+        uses: benmatselby/hugo-deploy-gh-pages@main
+        env:
+          TARGET_REPO: mercotui/mercotui.github.io
+          TARGET_BRANCH: master
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}

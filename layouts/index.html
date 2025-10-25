@@ -1,6 +1,9 @@
 {{ define "extra_header"}}
   <script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
   <script src="/scripts/potd.js" charset="utf-8"></script>
+  <script>
+    window.onload = set_potd;
+  </script>
 
   <link rel="stylesheet" href="/styles/baguetteBox.min.css">
 {{ end }}
@@ -15,7 +18,7 @@
 
   <div class="gallery">
     <a id="potd-random-container">
-      <img class="potd-placeholder" id="potd-random"></img>
+      <img class="potd-placeholder" id="potd-random"/>
     </a>
   </div>
   <noscript>
@@ -74,7 +77,7 @@
               </a>
           </li>
           <li>
-              <a href="http://www.last.fm/user/mercotui" target="_blank">
+              <a href="https://www.last.fm/user/mercotui" target="_blank">
                   <i class="fa fa-lastfm" aria-hidden="true"></i>
                   LastFM
               </a>
