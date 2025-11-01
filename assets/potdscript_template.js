@@ -1,3 +1,16 @@
+const imagelist = [
+  {{ $potd_page := site.GetPage "potd" }}
+  {{ $images := $potd_page.Resources.Get "images.yaml" | transform.Unmarshal }}
+  {{ range $year := $images  }}
+    {{ range $meta := $year.photos }}{
+      {{ $photo := $potd_page.Resources.GetMatch $meta.src }}
+        title: "{{ $meta.title }}",
+        url: "{{ $photo.Permalink }}"
+      },{{ end }}{{ end }}
+]
+
+window.onload = set_potd;
+
 function set_potd() {
   select_random_potd();
   baguetteBox.run('.gallery', {noScrollbars: true, animation: false});

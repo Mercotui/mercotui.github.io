@@ -1,0 +1,35 @@
+# Note the data structure is designed to be easy to use with Hugo, it needs keys to perform sorting, in this case `year`
+- year: 2020
+  photos:
+    - title: "Oberbaum Before Sunset"
+      src: "2020/kreuzberg_oberbaum.jpg"
+    - title: "Near Kreuzberg Market"
+      src: "2020/kreuzberg_birds.jpg"
+- year: 2019
+  photos:
+    - title: "Bode Museum"
+      src: "2019/museum_doors.jpg"
+    - title: "Nijmegen Sunset"
+      src: "2019/nijmegen_bridge.jpg"
+    - title: "Luxemburg Bank"
+      src: "2019/luxemburg_tower.jpg"
+    - title: "Bend in the Saar"
+      src: "2019/saar_bend.jpg"
+    - title: "Venemans Mill"
+      src: "2019/venemans.jpg"
+    - title: "Velperpoort Cat"
+      src: "2019/velperpoort_cat.jpg"
+    - title: "Very Distant Arnhem"
+      src: "2019/beek_arnhem.jpg"
+    - title: "Church Window"
+      src: "2019/beek_church.jpg"
+    - title: "Brussels Tram"
+      src: "2019/brussels_tram.jpg"
+    - title: "Den Bosch Sint Jan"
+      src: "2019/denbosch_church.jpg"
+- year: 2018
+  photos:
+    - title: "Groningen Sunset"
+      src: "2018/groningen_church.jpg"
+    - title: "Sonsbeek After Drought"
+      src: "2018/sonsbeek_sky.jpg"

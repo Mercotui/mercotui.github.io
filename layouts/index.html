@@ -1,30 +1,10 @@
 {{ define "extra_header"}}
   <script src="/scripts/baguetteBox.min.js" charset="utf-8"></script>
-  <script src="/scripts/potd.js" charset="utf-8"></script>
-  <script>
-    window.onload = set_potd;
-  </script>
-
   <link rel="stylesheet" href="/styles/baguetteBox.min.css">
 {{ end }}
 
 {{ define "main" }}
-  <h2>Picture of the day</h2>
-  <p>
-    By me, Menno van der Graaf
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-    Randomly selected daily, click <a href="potd">here</a> for more.
-  </p>
-
-  <div class="gallery">
-    <a id="potd-random-container">
-      <img class="potd-placeholder" id="potd-random"/>
-    </a>
-  </div>
-  <noscript>
-    <p>My random selector script can't be run, have this cat instead:</p>
-    <img class="potd" src="{{ .Site.BaseURL }}/potd/velperpoort_cat.jpg" alt="A cat at Velperpoort train station" onclick="modal()">
-  </noscript>
+  {{ partial "potd" . }}
 
   <h2>About</h2>
   <p>
