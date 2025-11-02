@@ -1,0 +1,115 @@
+# SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+# SPDX-License-Identifier: MIT
+
+version = 1
+
+[[annotations]]
+SPDX-FileCopyrightText = "2025 Menno van der Graaf <mennovandergraaf@hotmail.com>"
+SPDX-License-Identifier = "MIT"
+path = [
+    "archetypes/**",
+    "README.md",
+    "content/projects.html",
+    "content/about.html",
+    "content/apps/*",
+    "content/blog/*",
+    "content/potd/index.html",
+    "layouts/**",
+    "static/.well-known/keybase.txt",
+    "static/apps/xmas/2019/README.md",
+    "static/apps/xmas/2020/README.md",
+]
+
+[[annotations]]
+SPDX-FileCopyrightText = "2017 Marek Grzybek"
+SPDX-License-Identifier = "MIT"
+path = [
+    "static/scripts/baguetteBox.min.js",
+    "static/styles/baguetteBox.min.css"
+]
+
+[[annotations]]
+SPDX-FileCopyrightText = "2025 Menno van der Graaf <mennovandergraaf@hotmail.com>"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+path = [
+    "content/potd/*/*.jpg",
+    "static/images/*.png",
+    "static/apps/xmas/2020/assets/tower.svg",
+    "static/apps/xmas/2020/assets/ubahn.svg",
+    "static/apps/xmas/2020/assets/bridge.svg",
+    "static/apps/xmas/2019/tree.svg",
+    "static/apps/xmas/2019/tree_lightmask.svg",
+]
+
+[[annotations]]
+SPDX-FileCopyrightText = "Font Awesome by Dave Gandy - http://fontawesome.io"
+SPDX-License-Identifier = "MIT"
+path = "static/styles/font-awesome/css/font-awesome.min.css"
+
+
+[[annotations]]
+SPDX-FileCopyrightText = "Font Awesome by Dave Gandy - http://fontawesome.io"
+SPDX-License-Identifier = "OFL-1.1"
+path = [
+    "static/styles/font-awesome/fonts/FontAwesome.otf",
+    "static/styles/font-awesome/fonts/fontawesome-webfont.svg",
+    "static/styles/font-awesome/fonts/fontawesome-webfont.eot",
+    "static/styles/font-awesome/fonts/fontawesome-webfont.ttf",
+    "static/styles/font-awesome/fonts/fontawesome-webfont.woff",
+    "static/styles/font-awesome/fonts/fontawesome-webfont.woff2"
+]
+
+[[annotations]]
+SPDX-FileCopyrightText = "Font Awesome by Dave Gandy - http://fontawesome.io"
+SPDX-License-Identifier = "CC-BY-4.0"
+path = [
+    "static/apps/xmas/2020/assets/info.svg",
+    "static/apps/xmas/2020/assets/music.svg",
+    "static/apps/xmas/2020/assets/mute.svg",
+    "static/apps/xmas/2020/assets/pause.svg",
+    "static/apps/xmas/2020/assets/play.svg"
+]
+
+
+[[annotations]]
+# Only applies to the John Frost bridge model embedded inside the file
+SPDX-FileCopyrightText = "Pechristener - https://commons.wikimedia.org/wiki/User:Pechristener"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+path = "static/apps/xmas/2019/arnhem.svg"
+
+[[annotations]]
+SPDX-FileCopyrightText = "Pechristener - https://commons.wikimedia.org/wiki/User:Pechristener"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+path = "static/apps/xmas/2019/arnhem.svg"
+
+[[annotations]]
+# I claim only to be the certifier of public domain
+SPDX-FileCopyrightText = "2025 Menno van der Graaf <mennovandergraaf@hotmail.com>"
+SPDX-License-Identifier = "CC-PDDC"
+path = [
+    "static/apps/xmas/2019/bike.png",
+    "static/apps/xmas/2019/train.svg"
+]
+
+[[annotations]]
+SPDX-FileCopyrightText = "Kevin MacLeod (incompetech.com)"
+SPDX-License-Identifier = "CC-BY-3.0"
+path = "static/apps/xmas/2019/silentnight.mp3"
+
+[[annotations]]
+SPDX-FileCopyrightText = "The Ambient Visitor"
+SPDX-License-Identifier = "CC-BY-NC-ND-3.0"
+path = "static/apps/xmas/2020/assets/theAmbientVisitor-Crimble.mp3"
+
+
+[[annotations]]
+SPDX-FileCopyrightText = "The Qt Company"
+SPDX-License-Identifier = "GPL-3.0-only"
+path = [
+    "static/apps/tux_match/.gitignore",
+    "static/apps/tux_match/index.html",
+    "static/apps/tux_match/qtlogo.svg",
+    "static/apps/tux_match/tux_match.wasm",
+    "static/apps/tux_match/qtloader.js",
+    "static/apps/tux_match/tux_match.js",
+]

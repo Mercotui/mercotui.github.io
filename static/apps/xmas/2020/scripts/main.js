@@ -1,10 +1,13 @@
-window.addEventListener('resize', function(){
-    // const size = document.getElementById('content').offsetWidth;
-    snow_renderer.resize();
-    water_renderer.resize();
+// SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+// SPDX-License-Identifier: MIT
+
+window.addEventListener('resize', function () {
+  // const size = document.getElementById('content').offsetWidth;
+  snow_renderer.resize();
+  water_renderer.resize();
 }, false);
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
   var audio = new Audio('assets/theAmbientVisitor-Crimble.mp3');
   audio.volume = 0.0;
 
@@ -20,10 +23,10 @@ window.addEventListener('load', function(){
 
   // Event handlers
   var button_play = document.getElementById('buttonPlay');
-  button_play.onclick = function(event){
+  button_play.onclick = function (event) {
     if (controlls_enabled === true) {
       event.stopImmediatePropagation();
-      if (playing != true){
+      if (playing != true) {
         playing = true;
         animate_cycle();
         animate_lightup();
@@ -44,7 +47,7 @@ window.addEventListener('load', function(){
         button_play.src = "assets/play.svg";
       }
 
-      if (playing && !muted){
+      if (playing && !muted) {
         audio_fade(audio, 1.0);
       } else {
         audio_fade(audio, 0.0);
@@ -53,7 +56,7 @@ window.addEventListener('load', function(){
   }
 
   var button_mute = document.getElementById('buttonMute');
-  button_mute.onclick = function(event){
+  button_mute.onclick = function (event) {
     if (controlls_enabled === true) {
       event.stopImmediatePropagation();
       if (muted) {
@@ -64,7 +67,7 @@ window.addEventListener('load', function(){
         button_mute.src = "assets/music.svg";
       }
 
-      if (playing && !muted){
+      if (playing && !muted) {
         audio_fade(audio, 1.0);
       } else {
         audio.volume = 0;
@@ -74,7 +77,7 @@ window.addEventListener('load', function(){
   }
 
   var button_info = document.getElementById('buttonInfo');
-  button_info.onclick = function(event){
+  button_info.onclick = function (event) {
     if (controlls_enabled === true) {
       event.stopImmediatePropagation();
       window.open('https://github.com/Mercotui/mercotui.github.io/tree/master/apps/xmas/2020', '_blank');
@@ -82,7 +85,7 @@ window.addEventListener('load', function(){
   }
 
 
-  document.onclick = function() {
+  document.onclick = function () {
     show_controls();
     start_controls_timer();
   }
@@ -90,22 +93,23 @@ window.addEventListener('load', function(){
 }, false);
 
 var fade_interval;
-function audio_fade(audio, setpoint){
+
+function audio_fade(audio, setpoint) {
   clearInterval(fade_interval);
   audio.play();
 
   var setVolume = setpoint;
   var delta = setVolume - audio.volume;
-  if (delta > 0.0){
+  if (delta > 0.0) {
     var speed = 0.1;
   } else {
     var speed = -0.01;
   }
 
-  fade_interval = setInterval(function(){
+  fade_interval = setInterval(function () {
     var new_volume = audio.volume + speed;
-    new_volume = Math.max(new_volume,0.0);
-    new_volume = Math.min(new_volume,1.0);
+    new_volume = Math.max(new_volume, 0.0);
+    new_volume = Math.min(new_volume, 1.0);
     audio.volume = new_volume;
 
     if (delta > 0.0) {
@@ -118,18 +122,18 @@ function audio_fade(audio, setpoint){
         audio.pause();
       }
     }
-  },50);
+  }, 50);
 };
 
-function set_greetings(custom_text, name_index){
+function set_greetings(custom_text, name_index) {
   var text_1 = document.getElementById('text_1');
   var text_2 = document.getElementById('text_2');
   var text_3 = document.getElementById('text_3');
 
-  var lines =  custom_text.split('|');
-  if (lines.length == 1 && (lines[0].length > 0)){
+  var lines = custom_text.split('|');
+  if (lines.length == 1 && (lines[0].length > 0)) {
     text_2.textContent = lines[0];
-  } else if (lines.length == 2){
+  } else if (lines.length == 2) {
     text_1.textContent = lines[0];
     text_2.textContent = lines[1];
   }
@@ -150,6 +154,7 @@ function set_greetings(custom_text, name_index){
 }
 
 var cycle_started = false;
+
 function animate_cycle() {
   if (!cycle_started) {
     cycle_started = true;
@@ -221,6 +226,7 @@ function animate_shutdown() {
 
 var controlls_timeout;
 var controlls_enabled;
+
 function start_controls_timer() {
   clearInterval(controlls_timeout);
   controlls_timeout = setTimeout(hide_controls, 4000);

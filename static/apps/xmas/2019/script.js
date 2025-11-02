@@ -1,11 +1,13 @@
-window.addEventListener('resize', function(){
-    const size = document.getElementById('content').offsetWidth;
-    jsCanvasSnow.resize(size, size);
-    jsCanvasSnow.init();
-    tree_lights.resize();
+// SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+// SPDX-License-Identifier: MIT
+window.addEventListener('resize', function () {
+  const size = document.getElementById('content').offsetWidth;
+  jsCanvasSnow.resize(size, size);
+  jsCanvasSnow.init();
+  tree_lights.resize();
 }, false);
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
   var audio = new Audio('silentnight.mp3');
   audio.volume = 0.0;
 
@@ -22,7 +24,7 @@ window.addEventListener('load', function(){
   tree_lights.init();
 
   // Event handlers
-  document.ontouchstart = function(){
+  document.ontouchstart = function () {
     var text_hint = document.getElementById('text_hint');
     text_hint.textContent = "Hold for Lights";
 
@@ -32,7 +34,7 @@ window.addEventListener('load', function(){
     jsCanvasSnow.startsnow();
     audio_fade(audio, 1.0);
   };
-  document.ontouchend = function(){
+  document.ontouchend = function () {
     animate_shutdown();
     tree_lights.stop();
     jsCanvasSnow.stopsnow();
@@ -44,22 +46,23 @@ window.addEventListener('load', function(){
 }, false);
 
 var fade_interval;
-function audio_fade(audio, setpoint){
+
+function audio_fade(audio, setpoint) {
   clearInterval(fade_interval);
   audio.play();
 
   var setVolume = setpoint;
   var delta = setVolume - audio.volume;
-  if (delta > 0.0){
+  if (delta > 0.0) {
     var speed = 0.1;
   } else {
     var speed = -0.01;
   }
 
-  fade_interval = setInterval(function(){
+  fade_interval = setInterval(function () {
     var new_volume = audio.volume + speed;
-    new_volume = Math.max(new_volume,0.0);
-    new_volume = Math.min(new_volume,1.0);
+    new_volume = Math.max(new_volume, 0.0);
+    new_volume = Math.min(new_volume, 1.0);
     audio.volume = new_volume;
 
     if (delta > 0.0) {
@@ -72,19 +75,19 @@ function audio_fade(audio, setpoint){
         audio.pause();
       }
     }
-  },50);
+  }, 50);
 };
 
-function set_greetings(custom_text, name_index){
+function set_greetings(custom_text, name_index) {
   var text_1 = document.getElementById('text_1');
   var text_2 = document.getElementById('text_2');
   var text_3 = document.getElementById('text_3');
   var text_4 = document.getElementById('text_4');
 
-  var lines =  custom_text.split('|');
-  if (lines.length == 1){
+  var lines = custom_text.split('|');
+  if (lines.length == 1) {
     text_2.textContent = lines[0];
-  } else if (lines.length == 2){
+  } else if (lines.length == 2) {
     text_1.textContent = lines[0];
     text_2.textContent = lines[1];
   }
@@ -108,6 +111,7 @@ function set_greetings(custom_text, name_index){
 }
 
 var cycle_started = false;
+
 function animate_cycle() {
   if (!cycle_started) {
     cycle_started = true;

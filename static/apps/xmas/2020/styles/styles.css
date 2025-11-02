@@ -1,181 +1,186 @@
+/* SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com> */
+/* SPDX-License-Identifier: MIT */
+
 html, body {
-  /* ensure that all of the viewport is used */
-  width: 100%;
-  height: 100%;
-  /* ensure that no scrollbars appear */
-  margin: 0;
-  padding: 0;
+    /* ensure that all of the viewport is used */
+    width: 100%;
+    height: 100%;
+    /* ensure that no scrollbars appear */
+    margin: 0;
+    padding: 0;
 
-  /* center SVG horizontally and vertically */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    /* center SVG horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
-  background-color:#000;
-  user-select: none;
+    background-color: #000;
+    user-select: none;
 }
 
 #content {
-  width: 62vmin; /* golden blablabla */
-  height: 100vmin;
-  position: relative;
+    width: 62vmin; /* golden blablabla */
+    height: 100vmin;
+    position: relative;
 
-  background-color:#080B0C;
-  overflow: hidden;
-  z-index: 0;
+    background-color: #080B0C;
+    overflow: hidden;
+    z-index: 0;
 }
 
-@media (max-aspect-ratio: 1/1) { /* for square and slimmer viewport */
-   #content {
-    width: 62vmax; /* golden blablabla */
-    height: 100vmax;
-  }
+@media (max-aspect-ratio: 1/1) {
+    /* for square and slimmer viewport */
+    #content {
+        width: 62vmax; /* golden blablabla */
+        height: 100vmax;
+    }
 }
 
-@media (max-aspect-ratio: 62/100) { /* once viewport is taller/slimmer than the card */
-   #content {
-    width: 100vmin; /* golden blablabla */
-    height: 162vmin;
-  }
+@media (max-aspect-ratio: 62/100) {
+    /* once viewport is taller/slimmer than the card */
+    #content {
+        width: 100vmin; /* golden blablabla */
+        height: 162vmin;
+    }
 }
 
 
 .inner {
-  position: absolute;
+    position: absolute;
 }
 
 .greetings {
-  font-family: 'Space Grotesk', sans-serif;
-  text-align: center;
-  width: 100%;
-  font-size: 5vmin;
-  color: #CEDEDF;
-  margin: auto;
-  z-index: 9;
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    width: 100%;
+    font-size: 5vmin;
+    color: #CEDEDF;
+    margin: auto;
+    z-index: 9;
 }
 
 /* LAYERS */
 
 #back_light {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#323269, #0C1E43, #010307);
-  z-index: 1;
-  opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#323269, #0C1E43, #010307);
+    z-index: 1;
+    opacity: 0;
 }
 
 #snow_canvas {
-  margin: 0 auto;
-  height: 60%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
+    margin: 0 auto;
+    height: 60%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 #tower {
-  margin: 0 auto;
-  height: 61%; /* 1% extra to fill pixel gaps */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3;
+    margin: 0 auto;
+    height: 61%; /* 1% extra to fill pixel gaps */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
 }
 
 #ground {
-  margin: 0 auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 41%;
-  width: 100%;
-  z-index: 3;
-  background: black;
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 41%;
+    width: 100%;
+    z-index: 3;
+    background: black;
 }
 
 #ubahn {
-  margin: 0 auto;
-  bottom: -169%;
-  width: 50%;
-  left: 25%;
-  z-index: 5;
-  transform: rotate(-15deg);
-  transform-origin: bottom center;
-  filter: brightness(0.7);
+    margin: 0 auto;
+    bottom: -169%;
+    width: 50%;
+    left: 25%;
+    z-index: 5;
+    transform: rotate(-15deg);
+    transform-origin: bottom center;
+    filter: brightness(0.7);
 }
 
 #bridge {
-  margin: 0 auto;
-  bottom: 38%;
-  left: 0;
-  width: 100%;
-  z-index: 6;
-  filter: brightness(0);
+    margin: 0 auto;
+    bottom: 38%;
+    left: 0;
+    width: 100%;
+    z-index: 6;
+    filter: brightness(0);
 }
 
 #water_canvas {
-  margin: 0 auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 41%;
-  width: 100%;
-  z-index: 7;
-  filter: brightness(0);
+    margin: 0 auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 41%;
+    width: 100%;
+    z-index: 7;
+    filter: brightness(0);
 }
 
 #text_1 {
-  bottom: 5.4em;
-  z-index: 8;
-  opacity: 0;
+    bottom: 5.4em;
+    z-index: 8;
+    opacity: 0;
 }
 
 #text_2 {
-  bottom: 4.2em;
-  z-index: 8;
-  opacity: 0;
+    bottom: 4.2em;
+    z-index: 8;
+    opacity: 0;
 }
 
 #text_3 {
-  bottom:3em;
-  z-index: 8;
-  opacity: 0;
+    bottom: 3em;
+    z-index: 8;
+    opacity: 0;
 }
 
 #controlls {
-  margin: 0 auto;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle closest-corner at bottom, #323269ff, #01030700);
-  opacity: 0;
-  z-index: 10;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle closest-corner at bottom, #323269ff, #01030700);
+    opacity: 0;
+    z-index: 10;
 }
 
 #buttonMute {
-  margin: auto;
-  left: 25%;
-  bottom: 2%;
-  height: 5%;
-  z-index: 11;
+    margin: auto;
+    left: 25%;
+    bottom: 2%;
+    height: 5%;
+    z-index: 11;
 }
 
 #buttonPlay {
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  bottom: 1%;
-  height: 10%;
-  z-index: 11;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 1%;
+    height: 10%;
+    z-index: 11;
 }
 
 #buttonInfo {
-  margin: auto;
-  right: 25%;
-  bottom: 2%;
-  height: 5%;
-  width: height;
-  z-index: 11;
+    margin: auto;
+    right: 25%;
+    bottom: 2%;
+    height: 5%;
+    width: height;
+    z-index: 11;
 }

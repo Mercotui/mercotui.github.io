@@ -1,18 +1,26 @@
+# SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+# SPDX-License-Identifier: MIT
 name: Publish Site
-
 on:
   push:
-    branches: [ 'main' ]
-    tags: [ '*' ]
+    branches: ['main']
+    tags: ['*']
   pull_request:
-    branches: [ 'main' ]
-
+    branches: ['main']
 jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v3
+      - name: Set up jhead
+        run: sudo apt-get update && sudo apt install -y jhead
+      - uses: pre-commit/action@v3.0.1
   build:
+    needs: pre-commit
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.142.0
-
     steps:
       - name: Install Hugo CLI
         run: |
@@ -35,7 +43,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-
   deploy:
     needs: build
     if: github.ref == 'refs/heads/main'
@@ -50,7 +57,6 @@ jobs:
       group: "pages"
       cancel-in-progress: false
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
