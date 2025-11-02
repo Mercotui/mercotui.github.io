@@ -1,75 +1,85 @@
+/* SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com> */
+/* SPDX-License-Identifier: MIT */
+
 #back_light.fadein {
-  transition: 5s;
-  opacity: 1;
+    transition: 5s;
+    opacity: 1;
 }
+
 #back_light.fadeout {
-  transition: 5s;
-  opacity: 0;
+    transition: 5s;
+    opacity: 0;
 }
 
-#bike.cycle{
-  transition: 10s linear;
-  bottom: 28%;
-  left: 19%;
+#bike.cycle {
+    transition: 10s linear;
+    bottom: 28%;
+    left: 19%;
 }
 
-#train.cycle{
-  transition: 8s ease-in;
-  bottom: 20.5%;
-  right: -145%;
+#train.cycle {
+    transition: 8s ease-in;
+    bottom: 20.5%;
+    right: -145%;
 }
 
 #tree.fadein {
-  transition: 5s;
-  filter: saturate(1);
+    transition: 5s;
+    filter: saturate(1);
 }
+
 #tree.fadeout {
-  transition: 8s;
-  filter: saturate(0);
+    transition: 8s;
+    filter: saturate(0);
 }
 
 /* Texts */
 #text_hint.fadein {
-  transition: 10s;
-  opacity: 0.4;
+    transition: 10s;
+    opacity: 0.4;
 }
+
 #text_hint.fadeout {
-  transition: 0.2s;
-  opacity: 0;
+    transition: 0.2s;
+    opacity: 0;
 }
 
 #text_1.fadein {
-  transition: 5s;
-  opacity: 1;
+    transition: 5s;
+    opacity: 1;
 }
+
 #text_1.fadeout {
-  transition: 8s;
-  opacity: 0;
+    transition: 8s;
+    opacity: 0;
 }
 
 #text_2.fadein {
-  transition: 6s;
-  opacity: 1;
+    transition: 6s;
+    opacity: 1;
 }
+
 #text_2.fadeout {
-  transition: 8s;
-  opacity: 0;
+    transition: 8s;
+    opacity: 0;
 }
 
 #text_3.fadein {
-  transition: 7s;
-  opacity: 1;
+    transition: 7s;
+    opacity: 1;
 }
+
 #text_3.fadeout {
-  transition: 8s;
-  opacity: 0;
+    transition: 8s;
+    opacity: 0;
 }
 
 #text_4.fadein {
-  transition: 10s;
-  opacity: 1;
+    transition: 10s;
+    opacity: 1;
 }
+
 #text_4.fadeout {
-  transition: 8s;
-  opacity: 0;
+    transition: 8s;
+    opacity: 0;
 }

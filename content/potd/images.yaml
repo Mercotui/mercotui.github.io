@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+# SPDX-License-Identifier: MIT
 # Note the data structure is designed to be easy to use with Hugo, it needs keys to perform sorting, in this case `year`
 - year: 2020
   photos:

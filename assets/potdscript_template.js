@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2025 Menno van der Graaf <mennovandergraaf@hotmail.com>
+// SPDX-License-Identifier: MIT
+
 const imagelist = [
   {{ $potd_page := site.GetPage "potd" }}
   {{ $images := $potd_page.Resources.Get "images.yaml" | transform.Unmarshal }}
