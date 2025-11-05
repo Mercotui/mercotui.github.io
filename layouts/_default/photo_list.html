@@ -26,7 +26,7 @@
         {{ $thumbnail := $photo.Process "resize x500 center" }}
         <div class="image-list-item">
           <a href="{{ $photo.RelPermalink }}" target="_blank" data-caption="{{ $meta.title }}">
-            <img src="{{ $thumbnail.RelPermalink }}" class="image-list-thumbnail" alt="{{ $meta.title }}"/>
+            <img src="{{ $thumbnail.RelPermalink }}" loading="lazy" class="image-list-thumbnail" alt="{{ $meta.title }}"/>
           </a>
           <div about="{{ $photo.RelPermalink }}" style="display: none;">
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/StillImage" property="dct:title" rel="dct:type">{{ $meta.title }}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://mercotui.com/potd" property="cc:attributionName" rel="cc:attributionURL">Menno van der Graaf</a>,
